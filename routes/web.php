@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/prova', function () {
+    echo "dio e poi madonna";
+});

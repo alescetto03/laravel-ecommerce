@@ -2,7 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46d79619-1d56-4e70-bdfb-fbfdecdd5123" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Api/Model/RoleInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Api/Model/RoleUserInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Api/Role/RoleFactoryInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Api/Role/RoleManagementInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Api/Role/RoleRepositoryInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Api/RoleUser/RoleUserFactoryInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Api/RoleUser/RoleUserManagementInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Api/RoleUser/RoleUserRepositoryInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Factory/RoleFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Factory/RoleUserFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repository/RoleRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repository/RoleUserRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/e-commerce.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/e-commerce.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,7 +44,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
@@ -27,6 +52,24 @@
               <folding>
                 <element signature="e#7#389#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.env">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Events/UserRegistered.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="23" column="10" lean-forward="true" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -39,7 +82,30 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/app/Model/User.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/app/Model/RoleUser.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2020_05_02_215139_create_role_users_table.php" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
+        <option value="$PROJECT_DIR$/app/Api/Model/RoleUserInterface.php" />
+        <option value="$PROJECT_DIR$/app/Api/RoleUser/RoleUserManagementInterface.php" />
+        <option value="$PROJECT_DIR$/app/Api/Role/RoleManagementInterface.php" />
+        <option value="$PROJECT_DIR$/app/Api/User/UserFactoryInterface.php" />
+        <option value="$PROJECT_DIR$/app/Api/User/UserManagementInterface.php" />
+        <option value="$PROJECT_DIR$/app/Api/User/UserRepositoryInterface.php" />
+        <option value="$PROJECT_DIR$/app/Api/Model/RoleInterface.php" />
+        <option value="$PROJECT_DIR$/app/Api/Model/UserInterface.php" />
+        <option value="$PROJECT_DIR$/app/Api/Role/RoleRepositoryInterface.php" />
+        <option value="$PROJECT_DIR$/app/Model/Role.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2020_05_02_212351_create_roles_table.php" />
+        <option value="$PROJECT_DIR$/app/Factory/RoleFactory.php" />
+        <option value="$PROJECT_DIR$/app/Api/RoleUser/RoleUserRepositoryInterface.php" />
+        <option value="$PROJECT_DIR$/app/Repository/RoleRepository.php" />
+        <option value="$PROJECT_DIR$/app/Repository/RoleUserRepository.php" />
+        <option value="$PROJECT_DIR$/app/Api/RoleUser/RoleUserFactoryInterface.php" />
+        <option value="$PROJECT_DIR$/app/Api/Role/RoleFactoryInterface.php" />
+        <option value="$PROJECT_DIR$/app/Factory/RoleUserFactory.php" />
       </list>
     </option>
   </component>
@@ -127,20 +193,20 @@
       <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
       <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
       <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/vendor/laravel/ui" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="304" />
-    <option name="y" value="71" />
-    <option name="width" value="656" />
-    <option name="height" value="456" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="734" />
+    <option name="y" value="329" />
+    <option name="width" value="1039" />
+    <option name="height" value="639" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -151,12 +217,84 @@
             <path>
               <item name="e-commerce" type="b2602c69:ProjectViewProjectNode" />
               <item name="e-commerce" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="e-commerce" type="b2602c69:ProjectViewProjectNode" />
+              <item name="e-commerce" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="e-commerce" type="b2602c69:ProjectViewProjectNode" />
+              <item name="e-commerce" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Api" type="462c0819:PsiDirectoryNode" />
+              <item name="Role" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="e-commerce" type="b2602c69:ProjectViewProjectNode" />
+              <item name="e-commerce" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Api" type="462c0819:PsiDirectoryNode" />
+              <item name="RoleUser" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="e-commerce" type="b2602c69:ProjectViewProjectNode" />
+              <item name="e-commerce" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Events" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="e-commerce" type="b2602c69:ProjectViewProjectNode" />
+              <item name="e-commerce" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Factory" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="e-commerce" type="b2602c69:ProjectViewProjectNode" />
+              <item name="e-commerce" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="e-commerce" type="b2602c69:ProjectViewProjectNode" />
+              <item name="e-commerce" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Providers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="e-commerce" type="b2602c69:ProjectViewProjectNode" />
+              <item name="e-commerce" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Repository" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="e-commerce" type="b2602c69:ProjectViewProjectNode" />
+              <item name="e-commerce" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="e-commerce" type="b2602c69:ProjectViewProjectNode" />
+              <item name="e-commerce" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="e-commerce" type="b2602c69:ProjectViewProjectNode" />
+              <item name="e-commerce" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="e-commerce" type="b2602c69:ProjectViewProjectNode" />
+              <item name="e-commerce" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -165,6 +303,12 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\laravel\e-commerce\app\Api\RoleUser" />
+      <recent name="C:\xampp\htdocs\laravel\e-commerce\app\Model" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -196,24 +340,26 @@
       <updated>1588434178184</updated>
       <workItem from="1588434191257" duration="2286000" />
       <workItem from="1588436728732" duration="206000" />
-      <workItem from="1588437222202" duration="248000" />
+      <workItem from="1588437222202" duration="522000" />
+      <workItem from="1588437794052" duration="18000" />
+      <workItem from="1588437860659" duration="13000" />
+      <workItem from="1588452333006" duration="11442000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2740000" />
+    <option name="totallyTimeSpent" value="14487000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1224" height="1040" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2553305" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26718214" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.35211268" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.45287108" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -222,7 +368,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.283857" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.25799337" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -233,6 +379,13 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/database/migrations/2020_05_02_215139_create_role_users_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -240,6 +393,199 @@
           <folding>
             <element signature="e#7#389#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Providers/AppServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+          <folding>
+            <element signature="e#33#72#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Providers/BroadcastServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Api/Model/RoleUserInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Api/Role/RoleManagementInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Api/User/UserFactoryInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Api/User/UserManagementInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Api/User/UserRepositoryInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="574">
+          <caret line="41" column="51" selection-start-line="41" selection-start-column="51" selection-end-line="41" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Api/Model/UserInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Api/Model/RoleInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Api/RoleUser/RoleUserManagementInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../DNAlaravel6.0/app/Repository/MessageRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5">
+          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2020_05_02_212351_create_roles_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model/Role.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../DNAlaravel6.0/app/Factory/MessageFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="18" column="53" lean-forward="true" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model/RoleUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Api/Role/RoleRepositoryInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="12" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Repository/RoleRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="44" selection-start-line="44" selection-end-line="45" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Api/RoleUser/RoleUserRepositoryInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="12" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Repository/RoleUserRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="716">
+          <caret line="45" column="24" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Api/Role/RoleFactoryInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Api/RoleUser/RoleUserFactoryInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Factory/RoleUserFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="56" selection-start-line="21" selection-start-column="56" selection-end-line="21" selection-end-column="56" />
+          <folding>
+            <element signature="e#33#69#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Factory/RoleFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="35" column="21" lean-forward="true" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+          <folding>
+            <element signature="e#33#65#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Events/UserRegistered.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="23" column="10" lean-forward="true" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
         </state>
       </provider>
     </entry>

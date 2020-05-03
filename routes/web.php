@@ -11,10 +11,10 @@
 |
 */
 
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
 Route::get('/', function () {
     return view('welcome');
-});
-
-Route::get('/prova', function () {
-    echo "dio e poi madonnaaaaaa";
 });

@@ -4,8 +4,7 @@
 namespace App\Api\RoleUser;
 
 
-interface RoleUserFactoryInterface
+class RoleUserFactoryInterface
 {
-    public function make($user_id, $role_id);
-    public function create($user_id, $role_id);
+
 }

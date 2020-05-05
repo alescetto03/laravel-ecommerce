@@ -4,7 +4,11 @@
 namespace App\Api\User;
 
 
-class UserRepositoryInterface
+interface UserRepositoryInterface
 {
-
+    public function save($user);
+    public function getById($id);
+    public function deleteById($id);
+    public function getAll();
+    public function delete($user);
 }

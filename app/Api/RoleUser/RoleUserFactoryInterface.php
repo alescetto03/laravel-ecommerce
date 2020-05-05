@@ -4,7 +4,7 @@
 namespace App\Api\RoleUser;
 
 
-class RoleUserFactoryInterface
+interface RoleUserFactoryInterface
 {
 
 }

@@ -5,8 +5,9 @@ namespace App\Repository;
 
 
 use App\Api\Model\RoleInterface;
+use App\Api\Role\RoleRepositoryInterface;
 
-class RoleRepository
+class RoleRepository implements RoleRepositoryInterface
 {
     protected $role;
 

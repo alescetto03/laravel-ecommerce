@@ -16,17 +16,23 @@
     <link href="https://fonts.googleapis.com/css?family=Barlow:400,500,600,700,800,900&display=swap" rel="stylesheet">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/custom.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('custom-css/custom.css') }}" rel="stylesheet" type="text/css">
 </head>
 <body>
 <nav class="navbar navbar-expand-sm bg-dark  navbar-dark sticky-top">
     <!-- Brand/logo -->
-    <a class="navbar-brand" href="#">
+    <a class="big-screen navbar-brand" href="#">
         <img src="{{asset('img/logo.png')}}" alt="logo" style="width:40px;">
         <strong>DNA</strong>commerce
     </a>
+    <a class="small-screen navbar-brand" href="#">
+        <img src="{{asset('img/logo.png')}}" alt="logo" style="width:30px; height: 30px">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
     <!-- Header -->
-    <div class="collapse navbar-collapse">
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <!-- Dropdown Categorie -->
         <ul class="navbar-nav mr-auto">
             <li class="nav-item dropdown">
@@ -74,7 +80,7 @@
         </ul>
     </div>
 </nav>
-<main class="py-3">
+<main class="pt-3">
     @yield('content')
 </main>
 <script>

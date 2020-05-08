@@ -54,7 +54,7 @@
                 <div class="row my-4 ">
                     <div class="col-sm-4 topCtgs-container">
                         <div class="box">
-                            <img class="shadow-lg" src="{{asset('img/image-topCtgs_1.jpg')}}" width="280px" height="400px">
+                            <img class="shadow-lg img-bx" src="{{asset('img/image-topCtgs_1.jpg')}}">
                             <div class="content">
                                 <h2>Tecnologia</h2>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -65,7 +65,7 @@
                     </div>
                     <div class="col-sm-4 topCtgs-container">
                         <div class="box">
-                            <img class="shadow-lg" src="{{asset('img/image-topCtgs_2.jpg')}}" width="280px" height="400px">
+                            <img class="shadow-lg img-bx" src="{{asset('img/image-topCtgs_2.jpg')}}">
                             <div class="content">
                                 <h2>Abbigliamento</h2>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -76,7 +76,7 @@
                     </div>
                     <div class="col-sm-4 topCtgs-container">
                         <div class="box">
-                            <img class="shadow-lg" src="{{asset('img/image-topCtgs_3.jpg')}}" width="280px" height="400px">
+                            <img class="shadow-lg img-bx" src="{{asset('img/image-topCtgs_3.jpg')}}">
                             <div class="content">
                                 <h2>Sport</h2>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.

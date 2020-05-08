@@ -22,3 +22,7 @@ Route::get('/', function () {
 Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
     Route::resource('/users', 'UsersController', ['except' => ['show', 'create', 'store']]);
 });
+
+Route::get('/homepage', function() {
+    return view('homepage');
+});

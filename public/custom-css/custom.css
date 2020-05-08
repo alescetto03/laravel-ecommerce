@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow:400,500,600,700,800,900&display=swap');
+body{
+    font-family: 'Barlow', sans-serif;
+}
+.searchBar{
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid #ced4da;
+    background-color: transparent;
+    color: #F3F5F6;
+    transition: all 100ms ease-in;
+}
+.searchBar:focus{
+    padding: 0 20px 0 20px;
+    border-bottom: 2px solid #FCC018;
+    background-color: transparent;
+    color: #F3F5F6;
+}
+.btn-outline-warning{
+    border-color: #FCC018;
+    color: #FCC018;
+}
+.btn-outline-warning:hover{
+    color: #212529;
+    background: #FCC018;
+}
+.icon-hover{
+    margin: 0 20px 0 20px;
+    transition: all 0.2s ease-in;
+}
+.nav-link:hover .icon-hover{
+    color: #FCC018;
+}
+.image-bg{
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+.crs-button-move{
+    padding: 5px 5px 0px 3px;
+    background-color: #212529;
+    border: .1em solid #212529;
+    border-radius: 10px;
+}
+.carousel-caption{
+    width: 30%;
+    margin: auto;
+    background-color: rgba(30, 37, 41, .85);
+    opacity: 100%;
+    border-radius: 20px;
+}
+.carousel-caption h3{
+    color: #FCC018;
+}
+.carousel-caption p{
+    font-size: 17px;
+}
+.kook{
+    color: red;
+}
+.topCtgs-container{
+    background: #212529;
+    color: #F3F5F6;
+}

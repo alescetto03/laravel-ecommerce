@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Barlow:400,500,600,700,800,900&display=swap');
+.login-box{
+    background-color: #fff;
+    height: 100%;
+}
+.login-header{
+    padding: 0;
+    text-align: center;
+    color: #212529;
+    border-bottom: 1px solid #212529;
+}
 .small-screen{
+    display: none;
+}
+.ctg-drpdwn-576{
     display: none;
 }
 .active{
@@ -9,6 +22,7 @@
 }
 body{
     font-family: 'Barlow', sans-serif;
+    background-color: ivory;
 }
 .searchBar{
     border: none;
@@ -279,29 +293,59 @@ body{
         transition: all 0.2s ease-in;
     }
 }
-@media screen and (max-width: 576px){
+@media screen and (max-width: 575px){
     .small-screen{
         display: none;
     }
     .big-screen{
         display: block;
     }
+    .ctg-drpdwn-576{
+        display: block;
+    }
+    .ctg-drpdwn{
+        display: none;
+    }
+    .searchBar{
+        width: 85%;
+        margin-right: 20px;
+    }
     .img-bx {
-        width: 195px;
-        height: 279px;
+        width: 280px;
+        height: 400px;
     }
 
     .topCtgs-container {
-        width: 195px;
-        height: 279px;
+        width: 280px;
+        height: 400px;
+        margin: auto auto 15px auto;
     }
-
     .topCtgs-container .box {
-        width: 195px;
-        height: 279px;
+        width: 280px;
+        height: 400px;
+    }
+    .topCtgs-container .box img {
+        clip-path: circle(80px at center 100px);
+    }
+    .topCtgs-container .box:hover img {
+        clip-path: circle(80px at center 100px);
     }
     .navbar-nav{
         flex-direction: unset;
         justify-content: space-around;
+    }
+    .topCtgs-container .box .content p{
+         color: #edf0f1;
+         display: block;
+         font-size: 15px;
+     }
+    .topCtgs-container .box .content h2{
+        font-size: 20px;
+    }
+    .carousel-caption h3{
+        font-size: 20px;
+    }
+    .carousel-caption p{
+        font-size: 15px;
     }
 }

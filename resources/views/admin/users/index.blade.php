@@ -25,16 +25,16 @@
                                             <td>{{ $user->surname }}</td>
                                             <td>{{ $user->email }}</td>
                                             <td>
-                                                @foreach($user->roles() as $role)
-                                                    {{ $role, " " }}
+                                                @foreach($user->roles as $role)
+                                                    {{ $role->role_name, " " }}
                                                 @endforeach
                                             </td>
                                             <td>
-                                                <a href="{{ route('admin.users.edit', $user->id ) }}"><button type="button" class="btn btn-primary float-left">Edit</button></a>
+                                                <a href="{{ route('admin.users.edit', $user->id ) }}"><button type="button" class="btn btn-primary float-left w-50">Edit</button></a>
                                                 <form action="{{ route('admin.users.destroy', $user) }}" method="post">
                                                     @csrf
                                                     {{ method_field('DELETE') }}
-                                                    <button type="submit" class="btn btn-warning float-left">Delete</button>
+                                                    <button type="submit" class="btn btn-warning float-left w-50">Delete</button>
                                                 </form>
                                             </td>
                                         </tr>

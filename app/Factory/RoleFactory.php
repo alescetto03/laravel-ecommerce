@@ -5,9 +5,10 @@ namespace App\Factory;
 
 
 use App\Api\Model\RoleInterface;
+use App\Api\Role\RoleFactoryInterface;
 use App\Api\Role\RoleRepositoryInterface;
 
-class RoleFactory
+class RoleFactory implements RoleFactoryInterface
 {
     protected $role;
     protected $roleRepository;
@@ -25,13 +26,13 @@ class RoleFactory
     public function make($role_name)
     {
         $role = $this->role->make([
-            'role' => $role_name,
+            'role_name' => $role_name,
         ]);
         return $role;
     }
     public function create($role_name)
     {
-        $role = $this->role->make($role_name);
+        $role = $this->make($role_name);
         $this->roleRepository->save($role);
         return $role;
     }

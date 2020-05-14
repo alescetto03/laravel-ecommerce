@@ -6,7 +6,6 @@ use App\Api\Model\UserInterface;
 use App\Api\Role\RoleRepositoryInterface;
 use App\Api\User\UserRepositoryInterface;
 use App\Model\User;
-use Illuminate\Support\Facades\Gate;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -23,6 +22,7 @@ class UsersController extends Controller
     {
         $this->userRepository = $userRepository;
         $this->roleRepository = $roleRepository;
+        $this->middleware('is-superadmin');
     }
 
     /**
@@ -44,9 +44,6 @@ class UsersController extends Controller
      */
     public function edit(User $user)
     {
-        if (Gate::denies('user-management')) {
-            return redirect(route('admin.users.index'));
-        }
         $roles = $this->roleRepository->getAll();
 
         return view('admin.users.edit')->with([

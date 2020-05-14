@@ -4,7 +4,8 @@
 namespace App\Api\Category;
 
 
-interface CategoryManagement
+interface CategoryManagementInterface
 {
-
+    public function update($array, $category);
+    public function getByTitle($title);
 }

@@ -5,8 +5,9 @@ namespace App\Repository;
 
 
 use App\Api\Model\RoleUserInterface;
+use App\Api\RoleUser\RoleUserRepositoryInterface;
 
-class RoleUserRepository
+class RoleUserRepository implements RoleUserRepositoryInterface
 {
     protected $roleUser;
 

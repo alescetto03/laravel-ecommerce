@@ -64,7 +64,17 @@
                                             User Management
                                         </a>
                                     @endcan
-                                    
+
+                                    @can('product-management')
+                                        <a href="{{ url('categories-product') }}" class="dropdown-item">
+                                            Product Management
+                                        </a>
+                                    @endcan
+
+                                    <a href="{{ route('admin.users.index') }}" class="dropdown-item">
+                                        Edit Profile
+                                    </a>
+
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>

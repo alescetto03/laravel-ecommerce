@@ -3,11 +3,11 @@
 
 namespace App\Factory;
 
-
 use App\Api\Model\RoleUserInterface;
+use App\Api\RoleUser\RoleUserFactoryInterface;
 use App\Api\RoleUser\RoleUserRepositoryInterface;
 
-class RoleUserFactory
+class RoleUserFactory implements RoleUserFactoryInterface
 {
     protected $roleUser;
     protected $roleUserRepository;

@@ -4,7 +4,8 @@
 namespace App\Api\Product;
 
 
-class ProductManagementInterface
+interface ProductManagementInterface
 {
-
+    public function update($array, $product);
+    public function switchCategory($collection, $category_id);
 }

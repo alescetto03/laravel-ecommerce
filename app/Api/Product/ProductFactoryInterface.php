@@ -4,7 +4,8 @@
 namespace App\Api\Product;
 
 
-class ProductFactoryInterface
+interface ProductFactoryInterface
 {
-
+    public function make($sku, $name, $description, $quantity, $price, $image, $category_id);
+    public function create($sku, $name, $description, $quantity, $price, $image, $category_id);
 }

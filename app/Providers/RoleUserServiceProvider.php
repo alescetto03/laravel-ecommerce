@@ -48,5 +48,10 @@ class RoleUserServiceProvider extends ServiceProvider
             RoleUserFactoryInterface::class,
             RoleUserFactory::class
         );
+
+        $this->app->singleton(
+            RoleUserFactoryInterface::class,
+            RoleUserFactory::class
+        );
     }
 }

@@ -4,7 +4,8 @@
 namespace App\Api\Category;
 
 
-class CategoryFactoryInterface
+interface CategoryFactoryInterface
 {
-
+    public function make($title, $description, $image);
+    public function create($title, $description, $image);
 }

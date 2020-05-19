@@ -16,7 +16,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('homepage');
 });
 
 Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
@@ -24,7 +24,9 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
 });
 
 Route::get('categories-product', 'HomeController@categoriesProductsIndex');
-
+Route::get('/admin', function() {
+    return view('admin.admin_page');
+});
 /** Categorie */
 
 Route::get('categories/add', 'CategoriesController@add');

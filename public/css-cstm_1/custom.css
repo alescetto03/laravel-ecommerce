@@ -1,13 +1,250 @@
 @import url('https://fonts.googleapis.com/css?family=Barlow:400,500,600,700,800,900&display=swap');
-.login-box{
-    background-color: #fff;
+body {
+    overflow-x: hidden;
+}
+.admin-container h1{
+    color: #FCC018;
+    margin-bottom: 10px;
+}
+.admin-container p{
+    width: 70%;
+    margin: auto;
+    font-size: 18px;
+}
+.container-Crud{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 30px 0;
+    padding: 30px;
+}
+.container-Crud .card-crud{
+    position: relative;
+    height: 250px;
+    background-color: rgba(33, 37, 41, 0.8);
+    display: flex;
+    width: 30%;
+    margin: 30px 0;
+}
+.container-Crud .card-crud .iconBx{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #212529;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+}
+.container-Crud .card-crud .iconBx .icon{
+    color: #edf0f1;
+    font-size: 100px;
+    transition: 0.5s ease-in-out;
+}
+.container-Crud .card-crud:hover .iconBx .icon{
+    color: #edf0f1;
+    font-size: 75px;
+}
+.container-Crud .card-crud:hover .iconBx{
+    width: 150px;
+    height: 150px;
+    left: -75px;
+    top: calc(50% - 75px);
+    transition: 0.5s ease-in-out;
+    background-color: #FCC018;
+}
+.container-Crud .card-crud .iconBx:before{
+    content: attr(data-text);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 6em;
+    color: rgba(255, 255, 255, .05);
+    font-weight: 700;
+}
+.container-Crud .card-crud .content{
+    position: absolute;
+    right: 0;
+    width: calc(100% - 75px);
+    height: 100%;
+    padding: 20px;
+}
+.container-Crud .card-crud .content h3{
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #FCC018;
+    letter-spacing: 1.1px;
+}
+.container-Crud .card-crud .content .body-content{
+    margin-left: 10px;
+}
+.container-Crud .card-crud .content .body-content .col-auto a{
+    font-size: 20px;
+    color: #edf0f1;
+    text-decoration: none;
+    padding-bottom: 10px;
+    transition: 0.15s ease-in-out;
+}
+.container-Crud .card-crud .content .body-content .col-auto .icon{
+    font-size: 21px;
+    color: #edf0f1;
+}
+.container-Crud .card-crud .content .body-content .col-auto:hover a{
+    color: #FCC018;
+}
+.title-category{
+    background-color: rgb(52, 58, 64);
+    padding: 15px;
+}
+.title-category h2{
+    color: #FCC018;
+}
+.title-category p {
+    color: #edf0f1;
+    font-size: 17px;
+}
+.bg-orangeBrand{
+    background-color: #FCC018;
+}
+.table-UserManagement{
+    border: 1px solid #212529;
+}
+.table-UserManagement thead tr{
+    background-color: #FCC018;
+}
+.table-UserManagement thead tr th{
+    border-top: 1px solid #212529;
+    border-bottom: 2px solid #212529;
+}
+.dashboard-body p{
+    font-size: 14px;
+}
+.icon-dash{
+    color: white;
+    font-size: 38px;
+    margin: 5px;
+    transition: all 0.15s ease-in;
+}
+.dashboard-body p{
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+.dashboard-body .dash-priv .col{
+    background-color: #212529;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 12px;
+    transition: all 0.15s ease-in;
+}
+.dashboard-body .dash-priv .col:hover .icon-dash{
+    color: #FCC018;
+}
+.dashboard-body .dash-priv .col:hover{
+    background-color: rgba(33, 37, 41, 0.9);
+}
+.dashboard-body .dash-priv .col h3{
+    color: #FCC018;
+    font-weight: 500;
+}
+.dashboard-body .dash-priv .col p{
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 16px;
+    padding: 10px;
+}
+.dashboard-header{
+    padding: 5px;
+    word-spacing: 1.2px;
+}
+.dashboard-header h1{
+    color: #FCC018;
+    letter-spacing: 1px;
+}
+.brand-halfpage{
+    background: linear-gradient(135deg, rgba(33, 37, 41, 0.3), #212529);
+    text-align: center;
+}
+.brand-halfpage .box{
+    margin-top: 20%;
+}
+.login-registretionRemind{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.05%;
+}
+.login-registretionRemind .text{
+    font-size: 18px;
+    margin: 10px 10px 0 0;
+}
+.login-form-input{
+    color: #212529;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    border-bottom: 2px solid #edf0f1;
+    transition: all 0.15s ease-in;
+}
+.separator-form{
+    width: 100%;
+    border-bottom: 1px solid #FFF;
+}
+.login-form-input:focus{
+    background-color: rgba(237, 240, 241, 0.3);
+    border-bottom: 2px solid darkorange;
+}
+.login-form-box{
+    margin: 20px;
+}
+.register-form-box{
+    margin: 11.3px;
+}
+.login-form-txt{
+    font-size: 17px;
+}
+.form-header{
+     padding: 5px 0 5px 0;
+     text-align: center;
+     color: #212529;
+ }
+.form-body{
+    padding: 4rem 0 4rem 0;
+}
+.form-box{
+    border-left: 2px solid #212529;
+    background-color: #FCC018;
     height: 100%;
 }
-.login-header{
-    padding: 0;
-    text-align: center;
-    color: #212529;
-    border-bottom: 1px solid #212529;
+.dropdown-menu{
+    background-color: #4D5156;
+}
+.dropdown-header{
+    text-decoration: none;
+    color: #FCC018;
+}
+a.dropdown-header:hover{
+    text-decoration: none;
+    color: rgba(252, 192, 24, 0.8);
+}
+.dropdown-item{
+    color: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid transparent;
+}
+.dropdown-item:hover{
+    color: #FFf;
+    background-color: transparent;
+}
+.dropdown-divider{
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 .small-screen{
     display: none;
@@ -58,7 +295,7 @@ body{
     border-radius: 5px;
 }
 .crs-button-move{
-    padding: 5px 5px 0px 3px;
+    padding: 5px 5px 0 3px;
     background-color: #212529;
     border: .1em solid #212529;
     border-radius: 10px;
@@ -183,6 +420,14 @@ body{
     }
 }
 @media screen and (max-width: 1000px) {
+    .container-Crud{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .container-Crud .card-crud{
+        width: 400px;
+    }
     .img-bx {
         width: 195px;
         height: 279px;
@@ -234,6 +479,31 @@ body{
     }
 }
 @media screen and (max-width: 767px) {
+    .container-Crud .card-crud{
+        max-width: 300px;
+        flex-direction: column;
+        height: auto;
+    }
+    .container-Crud .card-crud .iconBx{
+        position: relative;
+    }
+    .container-Crud .card-crud .iconBx,
+    .container-Crud .card-crud:hover .iconBx{
+        width: 100%;
+        height: 200px;
+        left: 0;
+    }
+    .container-Crud .card-crud .iconBx .icon,
+    .container-Crud .card-crud:hover .iconBx .icon{
+        max-width: 100px;
+    }
+    .container-Crud .card-crud .content{
+        position: relative;
+        width: 100%;
+    }
+    .brand-halfpage{
+        display: none;
+    }
     .img-bx{
         width: 151px;
         height: 215px;

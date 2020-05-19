@@ -21,11 +21,11 @@
 <body>
 <nav class="navbar navbar-expand-sm bg-dark  navbar-dark sticky-top">
     <!-- Brand/logo -->
-    <a class="big-screen navbar-brand" href="{{ url('/homepage') }}">
+    <a class="big-screen navbar-brand" href="{{ url('/') }}">
         <img src="{{asset('img/logo.png')}}" alt="logo" style="width:40px;">
         <strong>DNA</strong>commerce
     </a>
-    <a class="small-screen navbar-brand" href="{{ url('/homepage') }}">
+    <a class="small-screen navbar-brand" href="{{ url('/') }}">
         <img src="{{asset('img/logo.png')}}" alt="logo" style="width:30px; height: 30px">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -40,14 +40,10 @@
                     Categorie
                 </a>
                 <div class="dropdown-menu">
-                    <h5 class="dropdown-header">Elettronica</h5>
-                    <a class="dropdown-item" href="#">Monitor</a>
-                    <a class="dropdown-item" href="#">Mouse</a>
-                    <a class="dropdown-item" href="#">Laptop</a>
-                    <h5 class="dropdown-header">Abbigliamento</h5>
-                    <a class="dropdown-item" href="#">Calzini</a>
+                    <a class="dropdown-header" href="{{ url('/category') }}">Elettronica</a>
+                    <a class="dropdown-header" href="#">Abbigliamento</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Prodotti Vari</a>
+                    <a class="dropdown-header" href="#">Prodotti Vari</a>
                 </div>
             </li>
         </ul>
@@ -71,28 +67,24 @@
                             Categorie
                         </a>
                         <div class="dropdown-menu">
-                            <h5 class="dropdown-header">Elettronica</h5>
-                            <a class="dropdown-item" href="#">Monitor</a>
-                            <a class="dropdown-item" href="#">Mouse</a>
-                            <a class="dropdown-item" href="#">Laptop</a>
-                            <h5 class="dropdown-header">Abbigliamento</h5>
-                            <a class="dropdown-item" href="#">Calzini</a>
+                            <a class="dropdown-header" href="{{ url('/login') }}">Elettronica</a>
+                            <a class="dropdown-header" href="#">Abbigliamento</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Prodotti Vari</a>
+                            <a class="dropdown-header" href="#">Prodotti Vari</a>
                         </div>
                     </li>
                 </ul>
             </li>
             @guest
-                <li class="nav-item nav-item-icon ">
-                <a class="nav-link " href="{{ route('login') }}" title="Accedi" data-placement="bottom" data-toggle="popover" data-trigger="hover" data-content="Entra nell'area utente">
-                    <svg class="bi bi-person-fill icon-hover" width="30px" height="30px" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
-                    </svg>
-                </a>
-            </li>
+                <li class="nav-item nav-item-icon">
+                    <a class="nav-link " href="{{ route('login') }}" title="Accedi" data-placement="bottom" data-toggle="popover" data-trigger="hover" data-content="Entra nell'area utente">
+                        <svg class="bi bi-person-fill icon-hover" width="30px" height="30px" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
+                        </svg>
+                    </a>
+                </li>
             @else
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown" style="margin-top: 5px">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                         {{ Auth::user()->name }} <span class="caret"></span>
                     </a>
@@ -102,11 +94,12 @@
                                                      document.getElementById('logout-form').submit();">
                             {{ __('Logout') }}
                         </a>
-
-                        <a href="{{ route('admin.users.index') }}" class="dropdown-item">
-                            User Management
+                        <a href="{{ url('/home') }}" class="dropdown-item">
+                            User Area
                         </a>
-
+                        <a href="{{ url('/admin') }}" class="dropdown-item">
+                            Admin Area
+                        </a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf
                         </form>

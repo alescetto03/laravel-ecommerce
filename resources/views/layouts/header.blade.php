@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css?family=Barlow:400,500,600,700,800,900&display=swap" rel="stylesheet">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/custom.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css-cstm_1/custom.css') }}" rel="stylesheet" type="text/css">
 </head>
 <body>
 <nav class="navbar navbar-expand-sm bg-dark  navbar-dark sticky-top">
@@ -40,9 +40,10 @@
                     Categorie
                 </a>
                 <div class="dropdown-menu">
-                    <a class="dropdown-header" href="{{ url('/category') }}">Elettronica</a>
-                    <a class="dropdown-header" href="#">Abbigliamento</a>
+                    <a class="dropdown-header" href="{{ url('/categories') }}">Tutte Le Categorie</a>
                     <div class="dropdown-divider"></div>
+                    <a class="dropdown-header" href="#">Elettronica</a>
+                    <a class="dropdown-header" href="#">Abbigliamento</a>
                     <a class="dropdown-header" href="#">Prodotti Vari</a>
                 </div>
             </li>
@@ -67,9 +68,10 @@
                             Categorie
                         </a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-header" href="{{ url('/login') }}">Elettronica</a>
-                            <a class="dropdown-header" href="#">Abbigliamento</a>
+                            <a class="dropdown-header" href="{{ url('/categories') }}">Tutte Le Categorie</a>
                             <div class="dropdown-divider"></div>
+                            <a class="dropdown-header" href="#">Elettronica</a>
+                            <a class="dropdown-header" href="#">Abbigliamento</a>
                             <a class="dropdown-header" href="#">Prodotti Vari</a>
                         </div>
                     </li>
@@ -97,11 +99,9 @@
                         <a href="{{ url('/home') }}" class="dropdown-item">
                             User Area
                         </a>
-                        @if(Auth::user()->can('product-management') || Auth::user()->can('user-management'))
-                            <a href="{{ url('/admin') }}" class="dropdown-item">
-                                Admin Area
-                            </a>
-                        @endif
+                        <a href="{{ url('/admin') }}" class="dropdown-item">
+                            Admin Area
+                        </a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf
                         </form>

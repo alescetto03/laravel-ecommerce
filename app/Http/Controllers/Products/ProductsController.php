@@ -7,6 +7,7 @@ use App\Api\Product\ProductFactoryInterface;
 use App\Api\Product\ProductManagementInterface;
 use App\Api\Product\ProductRepositoryInterface;
 use Faker;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class ProductsController extends Controller
@@ -76,6 +77,12 @@ class ProductsController extends Controller
         $product = $this->productManagement->update($validatedData, $product);
         $request->session()->flash('alert-success', 'Prodotto modificato con successo');
         return redirect('products/update');
+    }
+
+    public function read()
+    {
+        $products =  DB::table('products')->paginate(15);
+        return view('categories-products.products.read', ['products' => $products]);
     }
 
     public function remove()

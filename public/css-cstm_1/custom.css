@@ -2,9 +2,25 @@
 body {
     overflow-x: hidden;
 }
+.linkCrud li{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.linkCrud li a{
+    color: lightslategrey;
+}
+.linkCrud li:hover a{
+    color: #212529;
+}
+.separetorCrud{
+    border: 1px solid  rgba(33, 37, 41, 0.5);
+}
 .admin-container h1{
     color: #FCC018;
     margin-bottom: 10px;
+}
+.iconAdd{
+    font-size: 200px;
 }
 .admin-container p{
     width: 70%;
@@ -114,6 +130,9 @@ body {
 .bg-orangeBrand{
     background-color: #FCC018;
 }
+.text-orangeBrand{
+    color: #FCC018;
+}
 .table-UserManagement{
     border: 1px solid #212529;
 }
@@ -212,10 +231,10 @@ body {
     font-size: 17px;
 }
 .form-header{
-     padding: 5px 0 5px 0;
-     text-align: center;
-     color: #212529;
- }
+    padding: 5px 0 5px 0;
+    text-align: center;
+    color: #212529;
+}
 .form-body{
     padding: 4rem 0 4rem 0;
 }
@@ -605,10 +624,10 @@ body{
         justify-content: space-around;
     }
     .topCtgs-container .box .content p{
-         color: #edf0f1;
-         display: block;
-         font-size: 15px;
-     }
+        color: #edf0f1;
+        display: block;
+        font-size: 15px;
+    }
     .topCtgs-container .box .content h2{
         font-size: 20px;
     }

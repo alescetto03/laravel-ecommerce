@@ -35,6 +35,8 @@ Route::post('categories/add', 'CategoriesController@create');
 Route::get('categories/update', 'CategoriesController@edit');
 Route::post('categories/update', 'CategoriesController@update');
 
+Route::get('categories/read', 'CategoriesController@read');
+
 Route::get('categories/delete', 'CategoriesController@remove');
 Route::post('categories/delete', 'CategoriesController@delete');
 
@@ -48,6 +50,8 @@ Route::post('products/add', 'ProductsController@create');
 
 Route::get('products/update', 'ProductsController@edit');
 Route::post('products/update', 'ProductsController@update');
+
+Route::get('products/read', 'ProductsController@read');
 
 Route::get('products/delete', 'ProductsController@remove');
 Route::post('products/delete', 'ProductsController@delete');

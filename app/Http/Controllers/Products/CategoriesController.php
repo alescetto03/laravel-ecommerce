@@ -7,6 +7,7 @@ use App\Api\Category\CategoryManagementInterface;
 use App\Api\Category\CategoryRepositoryInterface;
 use App\Api\Product\ProductManagementInterface;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
 class CategoriesController extends Controller
@@ -99,5 +100,11 @@ class CategoriesController extends Controller
     {
         $category = $this->categoryRepository->getById($id);
         return view('categories-products.categories.category', compact('category'));
+    }
+
+    public function read()
+    {
+        $categories =  DB::table('categories')->paginate(15);
+        return view('categories-products.categories.read', ['categories' => $categories]);
     }
 }

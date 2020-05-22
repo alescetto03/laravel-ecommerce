@@ -7,6 +7,7 @@ use App\Api\Category\CategoryManagementInterface;
 use App\Api\Category\CategoryRepositoryInterface;
 use App\Api\Product\ProductManagementInterface;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class CategoriesController extends Controller
 {
@@ -38,9 +39,9 @@ class CategoriesController extends Controller
         $validatedData = $request->validate([
             'title' => 'required',
             'description' => 'required',
-            'image' => 'required|image',
+            'image' => 'required|file|image',
         ]);
-        $category = $this->categoryFactory->create($validatedData['title'], $validatedData['description'], $validatedData['image']);
+        $category = $this->categoryFactory->create($validatedData['title'], $validatedData['description'], $validatedData['image']->store('uploads', 'public'));
         $request->session()->flash('alert-success', 'Categoria aggiunta con successo');
         return redirect('categories/add');
     }
@@ -58,6 +59,7 @@ class CategoriesController extends Controller
             'description' => 'nullable',
             'image' => 'nullable|image',
         ]);
+        $validatedData['image'] = $validatedData['image']->store('uploads', 'public');
         $category = $this->categoryRepository->getById($request->category);
         if ($category->title == 'Varie') {
             $request->session()->flash('alert-danger', 'Non puoi modificare la categoria Varie!');
@@ -85,5 +87,17 @@ class CategoriesController extends Controller
         $category->delete();
         $request->session()->flash('alert-success', 'Categoria eliminata con successo');
         return redirect('categories/delete');
+    }
+
+    public function index()
+    {
+        $categories = $this->categoryRepository->getAll();
+        return view('categories-products.categories.index', compact('categories'));
+    }
+
+    public function category($id)
+    {
+        $category = $this->categoryRepository->getById($id);
+        return view('categories-products.categories.category', compact('category'));
     }
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -26,8 +27,11 @@ class HomeController extends Controller
         return view('home');
     }
 
-    public function categoriesProductsIndex()
+    public function management()
     {
-
+        if (Auth::user()->can('product-management') || Auth::user()->can('user-management')) {
+            return view('admin.admin_page');
+        }
+        return redirect('/');
     }
 }

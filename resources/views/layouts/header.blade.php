@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css?family=Barlow:400,500,600,700,800,900&display=swap" rel="stylesheet">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css-cstm_1/custom.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/custom.css') }}" rel="stylesheet" type="text/css">
 </head>
 <body>
 <nav class="navbar navbar-expand-sm bg-dark  navbar-dark sticky-top">
@@ -97,9 +97,11 @@
                         <a href="{{ url('/home') }}" class="dropdown-item">
                             User Area
                         </a>
-                        <a href="{{ url('/admin') }}" class="dropdown-item">
-                            Admin Area
-                        </a>
+                        @if(Auth::user()->can('product-management') || Auth::user()->can('user-management'))
+                            <a href="{{ url('/admin') }}" class="dropdown-item">
+                                Admin Area
+                            </a>
+                        @endif
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf
                         </form>

@@ -49,7 +49,7 @@ class ProductsController extends Controller
         ]);
         $faker = new Faker\Product();
         $sku = $faker->sku($validatedData['name']);
-        $this->productFactory->create($sku, $validatedData['name'], $validatedData['description'], $validatedData['quantity'], $validatedData['price'], $validatedData['image'], $validatedData['category']);
+        $this->productFactory->create($sku, $validatedData['name'], $validatedData['description'], $validatedData['quantity'], $validatedData['price'], $validatedData['image']->store('uploads', 'public'), $validatedData['category']);
         $request->session()->flash('alert-success', 'Prodotto aggiunto con successo');
         return redirect('products/add');
     }
@@ -71,6 +71,7 @@ class ProductsController extends Controller
             'image' => 'nullable|image',
             'category' => 'nullable',
         ]);
+        $validatedData['image'] = $validatedData['image']->store('uploads', 'public');
         $product = $this->productRepository->getById($request->product);
         $product = $this->productManagement->update($validatedData, $product);
         $request->session()->flash('alert-success', 'Prodotto modificato con successo');
@@ -88,5 +89,11 @@ class ProductsController extends Controller
         $this->productRepository->deleteById($request->product);
         $request->session()->flash('alert-success', 'Prodotto eliminato con successo');
         return redirect('products/delete');
+    }
+
+    public function product($id)
+    {
+        $product = $this->productRepository->getById($id);
+        return view('categories-products.products.product', compact('product'));
     }
 }

@@ -24,9 +24,9 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
 });
 
 Route::get('categories-product', 'HomeController@categoriesProductsIndex');
-Route::get('/admin', function() {
-    return view('admin.admin_page');
-});
+
+Route::get('/admin', 'HomeController@management');
+
 /** Categorie */
 
 Route::get('categories/add', 'CategoriesController@add');
@@ -37,6 +37,9 @@ Route::post('categories/update', 'CategoriesController@update');
 
 Route::get('categories/delete', 'CategoriesController@remove');
 Route::post('categories/delete', 'CategoriesController@delete');
+
+Route::get('categories/index', 'CategoriesController@index');
+Route::get('categories/{id}/{title}', 'CategoriesController@category');
 
 /** Prodotti */
 
@@ -49,6 +52,7 @@ Route::post('products/update', 'ProductsController@update');
 Route::get('products/delete', 'ProductsController@remove');
 Route::post('products/delete', 'ProductsController@delete');
 
+Route::get('products/{id}/{name}', 'ProductsController@product');
 //
 
 Route::get('/homepage', function() {

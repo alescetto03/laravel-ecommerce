@@ -2,6 +2,10 @@
 
 namespace App\Providers;
 
+use App\Events\UserLoggedIn;
+use App\Events\UserLoggedOut;
+use App\Listeners\CartRestoring;
+use App\Listeners\CartStoring;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
@@ -17,6 +21,14 @@ class EventServiceProvider extends ServiceProvider
     protected $listen = [
         Registered::class => [
             SendEmailVerificationNotification::class,
+        ],
+
+        UserLoggedOut::class => [
+            CartStoring::class,
+        ],
+
+        UserLoggedIn::class => [
+            CartRestoring::class,
         ],
     ];
 

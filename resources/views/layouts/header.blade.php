@@ -40,7 +40,7 @@
                     Categorie
                 </a>
                 <div class="dropdown-menu">
-                    <a class="dropdown-header" href="{{ url('/categories') }}">Tutte Le Categorie</a>
+                    <a class="dropdown-header" href="{{ url('/categories/index') }}">Tutte Le Categorie</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-header" href="#">Elettronica</a>
                     <a class="dropdown-header" href="#">Abbigliamento</a>
@@ -99,9 +99,11 @@
                         <a href="{{ url('/home') }}" class="dropdown-item">
                             User Area
                         </a>
-                        <a href="{{ url('/admin') }}" class="dropdown-item">
-                            Admin Area
-                        </a>
+                        @if(Auth::user()->can('product-management') || Auth::user()->can('user-management'))
+                            <a href="{{ url('/admin') }}" class="dropdown-item">
+                                Admin Area
+                            </a>
+                        @endif
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf
                         </form>
@@ -109,7 +111,7 @@
                 </li>
             @endguest
             <li class="nav-item nav-item-icon">
-                <a class="nav-link " href="#" title="Carrello" data-placement="bottom" data-toggle="popover" data-trigger="hover" data-content="0 Articoli nel tuo Carrello">
+                <a class="nav-link " href="{{ url('cart/index') }}" title="Carrello" data-placement="bottom" data-toggle="popover" data-trigger="hover" data-content="({{ $cart }}) Articoli nel tuo Carrello">
                     <svg class="bi bi-bag-fill icon-hover" width="25px" height="30px" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 4h14v10a2 2 0 01-2 2H3a2 2 0 01-2-2V4zm7-2.5A2.5 2.5 0 005.5 4h-1a3.5 3.5 0 117 0h-1A2.5 2.5 0 008 1.5z"/>
                     </svg>

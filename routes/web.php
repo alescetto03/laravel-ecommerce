@@ -11,6 +11,12 @@
 |
 */
 
+/** Ale */
+//TODO:: FARE IN MODO DI SPOSTARE I PRODOTTI NELLA CATEGORIA VARIE DOPO CHE E' STATA ELIMINATA UNA CATEGORIA
+//TODO:: FARE IN MODO CHE I GUEST POSSANO ACCEDERE ALLE CATEGORIE, MA CHE NON POSSANO METTERE NEL CARRELLO I PRODOTTI
+//TODO:: CREARE UN SEEDER PER LE CATEGORIE: TECNOLOGIA, ABBIGLIAMENTO, SPORT
+//TODO:: FARE IL CHECKOUT
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -57,7 +63,12 @@ Route::get('products/delete', 'ProductsController@remove');
 Route::post('products/delete', 'ProductsController@delete');
 
 Route::get('products/{id}/{name}', 'ProductsController@product');
-//
+
+/** Carrello */
+
+Route::post('cart/add', 'CartController@store');
+Route::post('cart/update', 'CartController@update');
+Route::get('cart/index', 'CartController@index');
 
 Route::get('/homepage', function() {
     return view('homepage');

@@ -34,14 +34,12 @@
                             <thead>
                                 <th scope="col">Title</th>
                                 <th scope="col">Description</th>
-                                <th scope="col">Image</th>
                             </thead>
                             <tbody>
                             @foreach($categories as $category)
                                     <tr>
                                         <td>{{ $category->title }}</td>
                                         <td>{{ $category->description }}</td>
-                                        <td>{{ $category->image }}</td>
                                     </tr>
                             @endforeach
 

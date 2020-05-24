@@ -68,7 +68,7 @@
                         </label>
 
                         <div class="col-md-6">
-                            <input id="title" type="text" class="login-form-input border-dark form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title') }}" required autocomplete="title" autofocus>
+                            <input id="title" type="text" class="login-form-input border-dark form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title') }}" autocomplete="title" autofocus>
 
                             @error('title')
                             <span class="invalid-feedback" role="alert">
@@ -84,7 +84,7 @@
                         </label>
 
                         <div class="col-md-6">
-                            <input id="description" type="text" class="login-form-input border-dark form-control @error('description') is-invalid @enderror" name="description" value="{{ old('description') }}" required autocomplete="description" autofocus>
+                            <input id="description" type="text" class="login-form-input border-dark form-control @error('description') is-invalid @enderror" name="description" value="{{ old('description') }}" autocomplete="description" autofocus>
 
                             @error('description')
                             <span class="invalid-feedback" role="alert">

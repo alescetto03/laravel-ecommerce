@@ -23,13 +23,12 @@ class ProductFactory implements ProductFactoryInterface
         $this->productRepository = $productRepository;
     }
 
-    public function make($sku, $name, $description, $quantity, $price, $image, $category_id)
+    public function make($sku, $name, $description, $price, $image, $category_id)
     {
         $product = $this->product->make([
             'sku' => $sku,
             'name' => $name,
             'description' => $description,
-            'quantity' => $quantity,
             'price' => $price,
             'image' => $image,
             'category_id' => $category_id,
@@ -37,9 +36,9 @@ class ProductFactory implements ProductFactoryInterface
         return $product;
     }
 
-    public function create($sku, $name, $description, $quantity, $price, $image, $category_id)
+    public function create($sku, $name, $description, $price, $image, $category_id)
     {
-        $product = $this->make($sku, $name, $description, $quantity, $price, $image, $category_id);
+        $product = $this->make($sku, $name, $description, $price, $image, $category_id);
         $this->productRepository->save($product);
         return $product;
     }

@@ -18,7 +18,6 @@ class CreateProductsTable extends Migration
             $table->string('sku');
             $table->string('name');
             $table->string('description');
-            $table->bigInteger('quantity');
             $table->float('price');
             $table->string('image')->nullable();
             $table->bigInteger('category_id')->unsigned();

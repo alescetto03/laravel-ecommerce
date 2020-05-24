@@ -12,22 +12,22 @@
                 <div class="carousel-item active">
                     <img class="image-bg" src="{{asset('img/image-bg_1.png')}}" width="100%">
                     <div class="carousel-caption">
-                        <h3>Novità Costanti</h3>
-                        <p>Tutti i nuovi articoli High Tech</p>
+                        <h3>Novità costanti</h3>
+                        <p>Tutti i nuovi articoli high tech</p>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img class="image-bg" src="{{asset('img/image-bg_2.jpg')}}" width="100%">
                     <div class="carousel-caption">
-                        <h3>Allimentiamo Passioni</h3>
-                        <p>Tutto ciò che occore per i tuoi Hobbie</p>
+                        <h3>Alimentiamo le tue passioni</h3>
+                        <p>Tutto ciò che occore per i tuoi hobby</p>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img class="image-bg" src="{{asset('img/image-bg_3.jpg')}}" width="100%">
                     <div class="carousel-caption">
                         <h3>Fashion & Style</h3>
-                        <p>Rimani aggiornato per rimanere Top</p>
+                        <p>Rimani aggiornato per rimanere al top</p>
                     </div>
                 </div>
             </div>
@@ -47,7 +47,7 @@
         <div class="container ">
             <div class="header-topCtg text-center py-1">
                 <h2>TOP CATEGORIE</h2>
-                <p>Le categorie con più articoli e con più acquiti. Potrebbero fare a caso tuo</p>
+                <p>Le categorie con il maggior numero di acquisti. Potrebbero fare al caso tuo</p>
             </div>
             <div class="separetor"></div>
             <div class="mr-left-topctg">

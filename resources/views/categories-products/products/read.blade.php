@@ -32,22 +32,20 @@
 
                         <table class="table-UserManagement table table-hover table-striped">
                             <thead>
+                                <th scope="col">Sku</th>
                                 <th scope="col">Title</th>
                                 <th scope="col">Description</th>
-                                <th scope="col">Quantity</th>
                                 <th scope="col">Price</th>
-                                <th scope="col">Image</th>
                                 <th scope="col">Category</th>
                             </thead>
                             <tbody>
                             @foreach($products as $product)
                                 <tr>
+                                    <td>{{ $product->sku }}</td>
                                     <td>{{ $product->name }}</td>
                                     <td>{{ $product->description }}</td>
-                                    <td>{{ $product->quantity }}</td>
                                     <td>{{ $product->price }}</td>
-                                    <td>{{ $product->image }}</td>
-                                    <td>{{ $product->category }}</td>
+                                    <td>{{ $product->category->title }}</td>
                                 </tr>
                             @endforeach
 

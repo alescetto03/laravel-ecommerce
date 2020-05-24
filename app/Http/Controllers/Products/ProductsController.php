@@ -43,14 +43,13 @@ class ProductsController extends Controller
         $validatedData = $request->validate([
             'name' => 'required',
             'description' => 'required',
-            'quantity' => 'required',
             'price' => 'required',
-            'image' => 'required|image',
+            'image' => 'required|file|image',
             'category' => 'required',
         ]);
         $faker = new Faker\Product();
         $sku = $faker->sku($validatedData['name']);
-        $this->productFactory->create($sku, $validatedData['name'], $validatedData['description'], $validatedData['quantity'], $validatedData['price'], $validatedData['image']->store('uploads', 'public'), $validatedData['category']);
+        $this->productFactory->create($sku, $validatedData['name'], $validatedData['description'], $validatedData['price'], $validatedData['image']->store('uploads', 'public'), $validatedData['category']);
         $request->session()->flash('alert-success', 'Prodotto aggiunto con successo');
         return redirect('products/add');
     }
@@ -67,12 +66,13 @@ class ProductsController extends Controller
         $validatedData = $request->validate([
             'name' => 'nullable',
             'description' => 'nullable',
-            'quantity' => 'nullable',
             'price' => 'nullable',
-            'image' => 'nullable|image',
-            'category' => 'nullable',
+            'image' => 'nullable|file|image',
+            'category_id' => 'nullable',
         ]);
-        $validatedData['image'] = $validatedData['image']->store('uploads', 'public');
+        if ($request->has('image')) {
+            $validatedData['image'] = $validatedData['image']->store('uploads', 'public');
+        }
         $product = $this->productRepository->getById($request->product);
         $product = $this->productManagement->update($validatedData, $product);
         $request->session()->flash('alert-success', 'Prodotto modificato con successo');
@@ -81,7 +81,7 @@ class ProductsController extends Controller
 
     public function read()
     {
-        $products =  DB::table('products')->paginate(15);
+        $products =  $this->productRepository->getAll();
         return view('categories-products.products.read', ['products' => $products]);
     }
 

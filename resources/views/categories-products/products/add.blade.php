@@ -81,22 +81,6 @@
                     </div>
 
                     <div class="form-group row">
-                        <label for="quantity" class="text-orangeBrand col-md-4 col-form-label text-md-right">
-                            <strong>{{ __('Quantità') }}</strong>
-                        </label>
-
-                        <div class="col-md-6">
-                            <input id="quantity" type="text" class="login-form-input border-dark form-control @error('quantity') is-invalid @enderror" name="quantity" value="{{ old('quantity') }}" required autocomplete="quantity" autofocus>
-
-                            @error('quantity')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                            @enderror
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
                         <label for="price" class="text-orangeBrand col-md-4 col-form-label text-md-right">
                             <strong>{{ __('Prezzo') }}</strong>
                         </label>

@@ -83,16 +83,6 @@
                     </div>
 
                     <div class="form-group row">
-                        <label for="quantity" class="text-orangeBrand col-md-4 col-form-label text-md-right">
-                            <strong>{{ __('Quantità') }}</strong>
-                        </label>
-
-                        <div class="col-md-6">
-                            <input id="quantity" type="text" class="login-form-input border-dark form-control" name="quantity" value="{{ old('quantity') }}"  autocomplete="quantity" autofocus>
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
                         <label for="price" class="text-orangeBrand col-md-4 col-form-label text-md-right">
                             <strong>{{ __('Prezzo') }}</strong>
                         </label>
@@ -113,12 +103,12 @@
                     </div>
 
                     <div class="form-group row">
-                        <label for="category" class="text-orangeBrand col-md-4 col-form-label text-md-right">
+                        <label for="category_id" class="text-orangeBrand col-md-4 col-form-label text-md-right">
                             <strong>{{ __('Categoria') }}</strong>
                         </label>
 
                         <div class="col-md-6">
-                            <select id="category" class="login-form-input border-dark form-control" name="category">
+                            <select id="category_id" class="login-form-input border-dark form-control" name="category_id">
                                 @foreach($categories as $category)
                                     <option value="{{ $category->id }}">{{ $category->title }}</option>
                                 @endforeach

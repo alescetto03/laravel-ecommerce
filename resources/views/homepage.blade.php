@@ -59,7 +59,7 @@
                                 <h2>Tecnologia</h2>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                     Praesent pretium sagittis ipsum sollicitudin gravida.</p>
-                                <a href="#">Guarda i Prodotti</a>
+                                <a href="{{ url('categories/2/Tecnologia') }}">Guarda i Prodotti</a>
                             </div>
                         </div>
                     </div>
@@ -70,7 +70,7 @@
                                 <h2>Abbigliamento</h2>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                     Praesent pretium sagittis ipsum sollicitudin gravida.</p>
-                                <a href="#">Guarda i Prodotti</a>
+                                <a href="{{ url('categories/3/Abbigliamento') }}">Guarda i Prodotti</a>
                             </div>
                         </div>
                     </div>
@@ -81,7 +81,7 @@
                                 <h2>Sport</h2>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                     Praesent pretium sagittis ipsum sollicitudin gravida.</p>
-                                <a href="#">Guarda i Prodotti</a>
+                                <a href="{{ url('categories/4/Sport') }}">Guarda i Prodotti</a>
                             </div>
                         </div>
                     </div>

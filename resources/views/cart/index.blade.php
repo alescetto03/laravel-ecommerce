@@ -9,7 +9,8 @@
                         @foreach($cart as $product)
                             <div>
                                 <span>Nome | {{ $product->name }} </span>
-                                <span> Prezzo | {{ $product->name }}</span>
+                                <div> Prezzo | {{ $product->price * $product->qty }}</div>
+                                <img src="{{ asset('storage/' . $product->options->image) }}">
                                 <form method="POST" action="{{ url('cart/update') }}">
                                     @csrf
                                     <input type="hidden" name="id" value="{{ $product->rowId }}">

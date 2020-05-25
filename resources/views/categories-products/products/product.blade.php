@@ -20,7 +20,7 @@
                             <input type="hidden" name="description" value="{{ $product->description }}">
                             <input type="hidden" name="price" value="{{ $product->price }}">
                             <input type="hidden" name="image" value="{{ $product->image }}">
-                            <button class="btn btn-primary" type="submit">Aggiungi al carrello</button>
+                            <button class="@guest btn btn-warning @else btn btn-primary @endguest" type="submit">@guest Effettua il log in per acquistare @else Aggiungi al carrello @endguest</button>
                         </form>
                     </div>
                 </div>

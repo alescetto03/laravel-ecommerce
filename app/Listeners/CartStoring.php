@@ -2,20 +2,26 @@
 
 namespace App\Listeners;
 
+use App\Api\Model\CartInterface;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 
 class CartStoring
 {
+    protected $cart;
+
     /**
      * Create the event listener.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct
+    (
+        CartInterface $cart
+    )
     {
-        //
+        $this->cart = $cart;
     }
 
     /**
@@ -26,6 +32,6 @@ class CartStoring
      */
     public function handle($event)
     {
-        Cart::store($event->user);
+        $this->cart->store($event->user);
     }
 }

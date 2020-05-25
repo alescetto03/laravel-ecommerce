@@ -12,10 +12,11 @@
 */
 
 /** Ale */
-//TODO:: FARE IN MODO DI SPOSTARE I PRODOTTI NELLA CATEGORIA VARIE DOPO CHE E' STATA ELIMINATA UNA CATEGORIA
-//TODO:: FARE IN MODO CHE I GUEST POSSANO ACCEDERE ALLE CATEGORIE, MA CHE NON POSSANO METTERE NEL CARRELLO I PRODOTTI
-//TODO:: CREARE UN SEEDER PER LE CATEGORIE: TECNOLOGIA, ABBIGLIAMENTO, SPORT
+
 //TODO:: FARE IL CHECKOUT
+//TODO:: FARE IN MODO DI ELIMINARE LE IMMAGINI INUTILIZZATE QUANDO SI ELIMINA/MODIFICA UN PRODOTTO/CATEGORIA
+
+/** */
 
 Auth::routes();
 
@@ -28,8 +29,6 @@ Route::get('/', function () {
 Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
     Route::resource('/users', 'UsersController', ['except' => ['show', 'create', 'store']]);
 });
-
-Route::get('categories-product', 'HomeController@categoriesProductsIndex');
 
 Route::get('/admin', 'HomeController@management');
 
@@ -46,8 +45,8 @@ Route::get('categories/read', 'CategoriesController@read');
 Route::get('categories/delete', 'CategoriesController@remove');
 Route::post('categories/delete', 'CategoriesController@delete');
 
-Route::get('categories/index', 'CategoriesController@index');
-Route::get('categories/{id}/{title}', 'CategoriesController@category');
+Route::get('categories/index', 'GuestController@productIndex');
+Route::get('categories/{id}/{title}', 'GuestController@category');
 
 /** Prodotti */
 
@@ -62,7 +61,7 @@ Route::get('products/read', 'ProductsController@read');
 Route::get('products/delete', 'ProductsController@remove');
 Route::post('products/delete', 'ProductsController@delete');
 
-Route::get('products/{id}/{name}', 'ProductsController@product');
+Route::get('products/{id}/{name}', 'GuestController@product');
 
 /** Carrello */
 

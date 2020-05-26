@@ -9,6 +9,7 @@ use App\Api\Product\ProductRepositoryInterface;
 use Faker;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ProductsController extends Controller
 {
@@ -50,6 +51,7 @@ class ProductsController extends Controller
         $faker = new Faker\Product();
         $sku = $faker->sku($validatedData['name']);
         $this->productFactory->create($sku, $validatedData['name'], $validatedData['description'], $validatedData['price'], $validatedData['image']->store('uploads', 'public'), $validatedData['category']);
+        Storage::disk('uploads')->put('uploads', $validatedData['image']);
         $request->session()->flash('alert-success', 'Prodotto aggiunto con successo');
         return redirect('products/add');
     }
@@ -96,11 +98,5 @@ class ProductsController extends Controller
         $this->productRepository->deleteById($request->product);
         $request->session()->flash('alert-success', 'Prodotto eliminato con successo');
         return redirect('products/delete');
-    }
-
-    public function product($id)
-    {
-        $product = $this->productRepository->getById($id);
-        return view('categories-products.products.product', compact('product'));
     }
 }

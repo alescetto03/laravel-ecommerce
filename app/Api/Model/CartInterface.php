@@ -4,7 +4,7 @@
 namespace App\Api\Model;
 
 
-class CartInterface
+interface CartInterface
 {
 
 }

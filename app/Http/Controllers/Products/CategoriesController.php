@@ -47,6 +47,7 @@ class CategoriesController extends Controller
             'image' => 'required|file|image',
         ]);
         $category = $this->categoryFactory->create($validatedData['title'], $validatedData['description'], $validatedData['image']->store('uploads', 'public'));
+        Storage::disk('uploads')->put('uploads', $validatedData['image']);
         $request->session()->flash('alert-success', 'Categoria aggiunta con successo');
         return redirect('categories/add');
     }
@@ -95,18 +96,6 @@ class CategoriesController extends Controller
         $category->delete();
         $request->session()->flash('alert-success', 'Categoria eliminata con successo');
         return redirect('categories/delete');
-    }
-
-    public function index()
-    {
-        $categories = $this->categoryRepository->getAll();
-        return view('categories-products.categories.index', compact('categories'));
-    }
-
-    public function category($id)
-    {
-        $category = $this->categoryRepository->getById($id);
-        return view('categories-products.categories.category', compact('category'));
     }
 
     public function read()

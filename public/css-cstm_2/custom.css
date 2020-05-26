@@ -2,6 +2,153 @@
 body {
     overflow-x: hidden;
 }
+.text-darkOrangeBrand{
+    color: #d9a317;
+}
+.details-product .btn-dtl-product{
+    padding: 10px;
+}
+.details-product{
+    margin-bottom: 10px;
+}
+.details-product .btn-dtl-product{
+    width: 100%;
+}
+.container-cart-dtl-product .pre-text{
+    font-size: 18px;
+    letter-spacing: 1.1px;
+    word-spacing: 1px;
+}
+.container-cart-button button{
+    border-radius: 5px;
+    margin: 10px 0;
+    width: 90%;
+}
+.separetor-cart-summary {
+    border-bottom: 1px solid rgba(55, 59, 62, 0.5);
+}
+.container-cart-total strong{
+    padding: 15px 0 15px 0;
+    font-size: 17px;
+}
+.container-cart-total,
+.container-cart-summery .card-body,
+.container-cart-product {
+    padding: 10px;
+}
+.nota{
+}
+.brd-brand{
+    border: 1px solid #FCC018;
+}
+.btn-brand{
+    background-color: rgba(55, 59, 62, 0.9);
+    font-size: 17px;
+    color: #FCC018;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+}
+.btn-brand:hover{
+    background-color: #FCC018;
+    color: rgba(55, 59, 62, 0.9);
+}
+.container-product .content p{
+    font-size: 18px;
+}
+.bg-darkLight{
+    background-color: rgba(55, 59, 62, 0.85);
+}
+.container-product .content .description-content{
+    width: 300px;
+    min-height: 70px;
+}
+.container-product h2{
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+.container-img-product .img img{
+    float: left;
+    border: none;
+    border-radius: 0;
+    width:  600px;
+    height: 500px;
+    object-fit: cover;
+}
+.container-product .content{
+    padding-left: 20px;
+}
+.block-products .content p{
+    font-size: 17px;
+}
+.block-products .content h3{
+    font-size: 20px;
+}
+.block-products .content{
+    padding: 8px 10px;
+}
+.block-products img{
+    width: 240px;
+    height: 200px;
+}
+.block-products .img img{
+    float: left;
+    border: none;
+    border-radius: 0;
+    width:  240px;
+    height: 200px;
+    object-fit: cover;
+}
+.block-products{
+    height: 300px;
+    width: 240px;
+    border-radius: 10px;
+    background-color: rgba(55, 59, 62, 1);
+    transition: all 0.15s ease-in-out;
+}
+.block-products:hover {
+    background-color: rgba(55, 59, 62, 0.9);
+}
+.container-products, .container-products:hover{
+    text-decoration: none;
+}
+.container-category .img img{
+    float: left;
+    border: none;
+    border-radius: 0;
+    width:  150px;
+    height: 215px;
+    object-fit: cover;
+}
+.container-category .row .content a{
+    color: #FCC018;
+    font-weight: 500;
+    padding: 5px 6px;
+    border: 1px solid #FCC018;
+    transition: all 0.15s ease-in-out;
+}
+.container-category .row .content a:hover{
+    color: #373B3E;
+    background-color: #FCC018;
+    text-decoration: none;
+}
+.container-category .row .content p{
+    height: 110px;
+}
+.container-category .row .content h2{
+    font-size: 24px;
+}
+.container-category .row .content{
+    width: 150px;
+    padding: 5px;
+}
+.container-category .row .col-category{
+    width: 150px;
+    height: 215px;
+}
+.container-category{
+    background-color: #373B3E;
+    border-radius: 10px;
+}
 .linkCrud li{
     margin-left: 20px;
     margin-right: 20px;
@@ -433,12 +580,35 @@ body{
     width: 280px;
     height: 400px;
 }
+@media screen and (max-width: 1200px) {
+    .col-s {
+        flex:0 0 33.3333333333%;
+        max-width:33.3333333333%
+    }
+    .container-img-product .img img{
+        float: left;
+        border: none;
+        border-radius: 0;
+        width:  100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
 @media screen and (max-width: 1024px) {
     .mr-left-topctg{
         margin-left: 10px;
     }
 }
+
 @media screen and (max-width: 1000px) {
+    .container-category .img img{
+        float: left;
+        border: none;
+        border-radius: 0;
+        width:  150px;
+        height: 200px;
+        object-fit: cover;
+    }
     .container-Crud{
         width: 100%;
         flex-direction: column;
@@ -497,7 +667,16 @@ body{
         font-size: 14px;
     }
 }
+@media screen and (max-width: 995px) {
+    .col-s {
+        flex:0 0 50%;
+        max-width:50%;
+    }
+}
 @media screen and (max-width: 767px) {
+    .container-category .row .content h2 {
+        font-size: 18px;
+    }
     .container-Crud .card-crud{
         max-width: 300px;
         flex-direction: column;
@@ -583,6 +762,14 @@ body{
     }
 }
 @media screen and (max-width: 575px){
+    .col-s,
+    .col-rsp-sm{
+        flex:0 0 100%;
+        max-width:100%;
+    }
+    .col-s{
+        margin: 0 0 0 45%;
+    }
     .small-screen{
         display: none;
     }

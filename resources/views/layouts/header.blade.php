@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css?family=Barlow:400,500,600,700,800,900&display=swap" rel="stylesheet">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css-cstm_1/custom.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css-cstm_2/custom.css') }}" rel="stylesheet" type="text/css">
 </head>
 <body>
 <nav class="navbar navbar-expand-sm bg-dark  navbar-dark sticky-top">
@@ -42,9 +42,9 @@
                 <div class="dropdown-menu">
                     <a class="dropdown-header" href="{{ url('/categories/index') }}">Tutte Le Categorie</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-header" href="#">Elettronica</a>
-                    <a class="dropdown-header" href="#">Abbigliamento</a>
-                    <a class="dropdown-header" href="#">Prodotti Vari</a>
+                    <a class="dropdown-header" href="{{ url('categories/2/Tecnologia') }}">Tecnologia</a>
+                    <a class="dropdown-header" href="{{ url('categories/3/Abbigliamento') }}">Abbigliamento</a>
+                    <a class="dropdown-header" href="{{ url('categories/4/Sport') }}">Sport</a>
                 </div>
             </li>
         </ul>
@@ -68,11 +68,11 @@
                             Categorie
                         </a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-header" href="{{ url('/categories') }}">Tutte Le Categorie</a>
+                            <a class="dropdown-header" href="{{ url('/categories/index') }}">Tutte Le Categorie</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-header" href="#">Elettronica</a>
-                            <a class="dropdown-header" href="#">Abbigliamento</a>
-                            <a class="dropdown-header" href="#">Prodotti Vari</a>
+                            <a class="dropdown-header" href="{{ url('categories/2/Tecnologia') }}">Tecnologia</a>
+                            <a class="dropdown-header" href="{{ url('categories/3/Abbigliamento') }}">Abbigliamento</a>
+                            <a class="dropdown-header" href="{{ url('categories/4/Sport') }}">Sport</a>
                         </div>
                     </li>
                 </ul>
@@ -111,7 +111,7 @@
                 </li>
             @endguest
             <li class="nav-item nav-item-icon">
-                <a class="nav-link " href="{{ url('cart/index') }}" title="Carrello" data-placement="bottom" data-toggle="popover" data-trigger="hover" data-content="({{ $cart }}) Articoli nel tuo Carrello">
+                <a class="nav-link " href="{{ url('cart/index') }}" title="Carrello" data-placement="bottom" data-toggle="popover" data-trigger="hover" data-content="{{ $cart }} Articoli nel tuo Carrello">
                     <svg class="bi bi-bag-fill icon-hover" width="25px" height="30px" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 4h14v10a2 2 0 01-2 2H3a2 2 0 01-2-2V4zm7-2.5A2.5 2.5 0 005.5 4h-1a3.5 3.5 0 117 0h-1A2.5 2.5 0 008 1.5z"/>
                     </svg>

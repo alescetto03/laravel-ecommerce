@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Api\Model\CartInterface;
 use App\Api\Model\ProductInterface;
 use App\Api\Product\ProductFactoryInterface;
 use App\Api\Product\ProductManagementInterface;
@@ -10,6 +11,7 @@ use App\Factory\ProductFactory;
 use App\Management\ProductManagement;
 use App\Model\Product;
 use App\Repository\ProductRepository;
+use Gloudemans\Shoppingcart\Cart;
 use Illuminate\Support\ServiceProvider;
 
 class ProductServiceProvider extends ServiceProvider
@@ -64,6 +66,11 @@ class ProductServiceProvider extends ServiceProvider
         $this->app->singleton(
             ProductManagementInterface::class,
             ProductManagement::class
+        );
+
+        $this->app->bind(
+            CartInterface::class,
+            Cart::class
         );
     }
 }

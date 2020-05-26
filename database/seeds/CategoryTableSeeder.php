@@ -23,6 +23,9 @@ class CategoryTableSeeder extends Seeder
 
     public function run()
     {
-        $this->categoryFactory->create('Varie', 'Prodotti vari', null);
+        $this->categoryFactory->create('Varie', 'Prodotti vari', 'uploads/prodotti.jpg');
+        $this->categoryFactory->create('Tecnologia', 'Lorem ipsum dolor', 'uploads/image-topCtgs_1.jpg');
+        $this->categoryFactory->create('Abbigliamento', 'Lorem ipsum dolor', 'uploads/image-topCtgs_2.jpg');
+        $this->categoryFactory->create('Sport', 'Lorem ipsum dolor', 'uploads/image-topCtgs_3.jpg');
     }
 }

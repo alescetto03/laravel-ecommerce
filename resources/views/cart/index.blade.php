@@ -94,7 +94,9 @@
                                 </div>
                             </div>
                             <div class="container-cart-button">
-                                <button class="btn btn-brand brd-brand btn-cart">CONFERMA</button>
+                                <a href="{{ url('/checkout') }}">
+                                    <button class="btn btn-brand brd-brand btn-cart">CONFERMA</button>
+                                </a>
                             </div>
                         </div>
                     </div>

@@ -69,6 +69,11 @@ Route::post('cart/add', 'CartController@store');
 Route::post('cart/update', 'CartController@update');
 Route::get('cart/index', 'CartController@index');
 
+/** Checkout */
+
+Route::get('checkout', 'CheckoutController@index');
+Route::post('payment', 'CheckoutController@payment');
+
 Route::get('/homepage', function() {
     return view('homepage');
 });

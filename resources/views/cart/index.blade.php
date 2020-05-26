@@ -12,7 +12,7 @@
                         <p class="pre-text">I Tuoi Prodotti nel Dettaglio</p>
                         @foreach($cart as $product)
                             <div class="details-product">
-                                <a class="btn btn-brand btn-dtl-product" data-toggle="collapse" href="#{{$product->name}}" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                <a class="btn btn-brand btn-dtl-product" data-toggle="collapse" href="#product{{$product->id}}" role="button" aria-expanded="false" aria-controls="collapseExample">
                                     <div class="content row justify-content-between align-content-center">
                                         <div class="col-auto text-left">
                                             {{$product->name}}
@@ -22,22 +22,25 @@
                                         </div>
                                     </div>
                                 </a>
-                                <div class="collapse" id="{{$product->name}}">
+                                <div class="collapse" id="product{{$product->id}}">
                                     <div class="card card-body">
-                                        <div class="row justify-content-between">
-                                            <div class="col-md-4">
-                                                <img src="{{ asset('storage/' . $product->image) }}">
+                                        <div class="row justify-content-around">
+                                            <div class="col-md-4 col-cart-prd">
+                                                <div class="img">
+                                                    <img src="{{ asset('storage/' . $product->options->image) }}">
+                                                </div>
                                             </div>
-                                            <div class="col-auto">
+                                            <div class="col-auto col-cart-prd">
                                                 <p class="text-darkOrangeBrand text-right">PREZZO: {{$product->price}} €</p>
                                                 <form class="text-center" method="POST" action="{{ url('cart/update') }}">
                                                     @csrf
-                                                    <input type="hidden" name="id" value="{{ $product->rowId }}">
-                                                    <label for="quantity">Quantità</label>
-                                                    <input class="login-form-input text-right" type="text" name="quantity" autocomplete="off" value="{{ $product->qty }}">
-                                                    <br>
+                                                    <div class="mb-4">
+                                                        <input type="hidden" name="id" value="{{ $product->rowId }}">
+                                                        <button id="subtract" class="oper-btn">-</button>
+                                                        <input id="input_number" class="number-form-input" type="number" name="quantity" autocomplete="off" value="{{ $product->qty }}">
+                                                        <button id="add" class="oper-btn">+</button>
+                                                    </div>
                                                     <buttom class="btn btn-danger">Rimuovi</buttom>
-                                                    <button class=" btn btn-warning" type="submit">Aggiorna</button>
                                                 </form>
                                             </div>
                                         </div>

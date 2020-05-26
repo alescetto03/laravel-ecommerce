@@ -23,7 +23,9 @@ class CartController extends Controller
     {
         $cart = $this->cart->content();
         $total = $this->cart->priceTotal();
-        return view('cart.index', compact('cart', 'total'));
+        $totalTax = $this->cart->total();
+        $tax = $totalTax - $total;
+        return view('cart.index', compact('tax', 'cart', 'totalTax'));
     }
 
     public function store(Request $request)

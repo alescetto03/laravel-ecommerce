@@ -49,21 +49,6 @@
                                 </div>
                             </div>
                         @endforeach
-                        <div style="display: none">
-                            @foreach($cart as $product)
-                                <div>
-                                    <span>Nome | {{ $product->name }} </span>
-                                    <span> Prezzo | {{ $product->price }}</span>
-                                    <form method="POST" action="{{ url('cart/update') }}">
-                                        @csrf
-                                        <input type="hidden" name="id" value="{{ $product->rowId }}">
-                                        <label for="quantity">Quantità</label>
-                                        <input type="text" name="quantity" autocomplete="off" value="{{ $product->qty }}">
-                                        <button type="submit">Aggiorna</button>
-                                    </form>
-                                </div>
-                            @endforeach
-                        </div>
                     @endif
                 </div>
             </div>
@@ -87,10 +72,18 @@
                             @endforeach
                             <div class="container-cart-total row justify-content-between">
                                 <div class="col-md-6 text-left">
+                                    <em>IVA</em>
+                                </div>
+                                <div class="col-md-4 text-right">
+                                    <p>{{ $tax }} €</p>
+                                </div>
+                            </div>
+                            <div class="container-cart-total row justify-content-between">
+                                <div class="col-md-6 text-left">
                                     <strong>TOTALE</strong>
                                 </div>
                                 <div class="col-md-4 text-right">
-                                    <strong>{{ $total }} €</strong>
+                                    <strong>{{ $totalTax }} €</strong>
                                 </div>
                             </div>
                             <div class="container-cart-button">

@@ -20,7 +20,10 @@ class CheckoutController extends Controller
     public function index()
     {
         $total = $this->cart->total();
-        return view('checkout.checkout', compact('total'));
+        $cart = $this->cart->content();
+        $totalNoTax = $this->cart->priceTotal();
+        $tax = $total - $totalNoTax;
+        return view('checkout.checkout', compact('cart', 'total', 'tax'));
     }
 
     public function payment()

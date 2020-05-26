@@ -31,7 +31,7 @@
                     <form method="POST" action="{{ url('cart/add') }}" class="mt-4">
                         @csrf
                         <p class="content nota m-0">
-                            *tasse escluse
+                            *IVA esclusa
                         </p>
                         <input type="hidden" name="id" value="{{ $product->id }}">
                         <input type="hidden" name="name" value="{{ $product->name }}">

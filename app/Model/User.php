@@ -43,6 +43,11 @@ class User extends Authenticatable implements UserInterface
         return $this->belongsToMany('App\Model\Role');
     }
 
+    public function orders()
+    {
+        return $this->hasMany('App\Model\Order');
+    }
+
     public function hasAnyRoles($roles)
     {
         if($this->roles()->whereIn('role_name', $roles)->first()) {

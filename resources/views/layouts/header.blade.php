@@ -91,19 +91,22 @@
                         {{ Auth::user()->name }} <span class="caret"></span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ route('logout') }}"
-                           onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                            {{ __('Logout') }}
-                        </a>
                         <a href="{{ url('/home') }}" class="dropdown-item">
                             User Area
+                        </a>
+                        <a href="{{ url('/chronology') }}" class="dropdown-item">
+                            Cronologia acquisti
                         </a>
                         @if(Auth::user()->can('product-management') || Auth::user()->can('user-management'))
                             <a href="{{ url('/admin') }}" class="dropdown-item">
                                 Admin Area
                             </a>
                         @endif
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                           onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf
                         </form>

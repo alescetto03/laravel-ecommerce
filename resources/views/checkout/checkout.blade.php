@@ -8,6 +8,7 @@
                     <h1>Checkout</h1>
                     <h4>Totale: {{ $total }}</h4>
                     <form action="{{ url('/payment') }}" method="post">
+                        @csrf
                         <div class="row">
                             <div class="col-xs-12">
                                 <div class="form-group">
@@ -41,6 +42,12 @@
                             </div>
                             <div class="col-xs-12">
                                 <div class="form-group">
+                                    <label for="cvv">CVV</label>
+                                    <input type="text" id="cvv" name="cvv" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="col-xs-12">
+                                <div class="form-group">
                                     <label for="card_intestatary">Intestatario carta</label>
                                     <input type="text" id="card_intestatary" name="card_intestatary" class="form-control" required>
                                 </div>
@@ -49,12 +56,6 @@
                                 <div class="form-group">
                                     <label for="expiration">Scadenza</label>
                                     <input type="text" id="expiration" name="expiration" class="form-control" required>
-                                </div>
-                            </div>
-                            <div class="col-xs-12">
-                                <div class="form-group">
-                                    <label for="cvv">CVV</label>
-                                    <input type="text" id="cvv" name="cvv" class="form-control" required>
                                 </div>
                             </div>
                         </div>

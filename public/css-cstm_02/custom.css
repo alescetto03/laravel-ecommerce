@@ -2,6 +2,12 @@
 body {
     overflow-x: hidden;
 }
+.img-metodPayment img{
+    width: 140px;
+}
+.bg-brandLight{
+    background-color: rgba(161, 232, 204, 0.35);
+}
 .oper-btn {
     padding: 0 9px 0 9px;
     border-radius: 50px;
@@ -612,6 +618,9 @@ body{
     height: 400px;
 }
 @media screen and (max-width: 1200px) {
+    .img-metodPayment img{
+        width: 90px;
+    }
     .col-s {
         flex:0 0 33.3333333333%;
         max-width:33.3333333333%
@@ -630,7 +639,6 @@ body{
         margin-left: 10px;
     }
 }
-
 @media screen and (max-width: 1000px) {
     .container-category .img img{
         float: left;
@@ -707,13 +715,27 @@ body{
 @media screen and (max-width: 950px) {
     .col-cart-prd {
         flex:0 0 100%;
-        max-width:100%
+        max-width:100%;
     }
     .col-cart-prd .img img{
         margin-left: 20%;
     }
+    .container-checkout .col-checkout{
+        flex:0 0 100%;
+        max-width:100%;
+    }
 }
 @media screen and (max-width: 767px) {
+    .img-metodPayment img{
+        display: none;
+    }
+    .container-checkout .container-title{
+        flex:0 0 100%;
+        max-width:100%
+    }
+    .container-checkout .container-title h4{
+        font-size: 20px;
+    }
     .container-category .row .content h2 {
         font-size: 18px;
     }
@@ -806,6 +828,14 @@ body{
     .col-rsp-sm{
         flex:0 0 100%;
         max-width:100%;
+    }
+    .col-category img{
+        float: left;
+        border: none;
+        border-radius: 0;
+        width:  120px;
+        height: 215px;
+        object-fit: cover;
     }
     .col-s{
         margin: 0 0 0 45%;

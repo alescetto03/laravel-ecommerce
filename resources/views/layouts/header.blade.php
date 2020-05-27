@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css?family=Barlow:400,500,600,700,800,900&display=swap" rel="stylesheet">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css-cstm_01/custom.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css-cstm_02/custom.css') }}" rel="stylesheet" type="text/css">
 </head>
 <body>
 <nav class="navbar navbar-expand-sm bg-dark  navbar-dark sticky-top">

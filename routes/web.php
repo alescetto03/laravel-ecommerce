@@ -74,7 +74,11 @@ Route::get('cart/index', 'CartController@index');
 Route::get('checkout', 'CheckoutController@index');
 Route::post('payment', 'CheckoutController@payment');
 Route::get('thankyou', 'CheckoutController@thanks');
-Route::get('chronology', 'CheckoutController@chronology');
+
+/** Chronology */
+
+Route::get('chronology', 'ChronologyController@index');
+Route::get('chronology/store', 'ChronologyController@store');
 
 Route::get('/homepage', function() {
     return view('homepage');

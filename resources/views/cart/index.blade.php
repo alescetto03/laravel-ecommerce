@@ -87,8 +87,8 @@
                                 </div>
                             </div>
                             <div class="container-cart-button">
-                                <a href="{{ url('/checkout') }}">
-                                    <button class="btn btn-brand brd-brand btn-cart">CONFERMA</button>
+                                <a href="@if($cart->isEmpty()) {{ url('/categories/index') }}  @else {{ url('/checkout') }} @endif">
+                                    <button class="btn btn-brand brd-brand btn-cart">@if($cart->isEmpty()) AGGIUNGI DEI PRODOTTI  @else CONFERMA @endif</button>
                                 </a>
                             </div>
                         </div>

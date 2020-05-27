@@ -72,11 +72,13 @@ class ProductsController extends Controller
             'image' => 'nullable|file|image',
             'category_id' => 'nullable',
         ]);
-        if ($request->has('image')) {
-            $validatedData['image'] = $validatedData['image']->store('uploads', 'public');
-        }
         $product = $this->productRepository->getById($request->product);
-        $product = $this->productManagement->update($validatedData, $product);
+        if ($request->has('image')) {
+            Storage::disk('uploads')->put('uploads', $validatedData['image']);
+            $validatedData['image'] = $validatedData['image']->store('uploads', 'public');
+            Storage::disk('uploads')->delete($product->image);
+        }
+        $this->productManagement->update($validatedData, $product);
         $request->session()->flash('alert-success', 'Prodotto modificato con successo');
         return redirect('products/update');
     }
@@ -95,7 +97,8 @@ class ProductsController extends Controller
 
     public function delete(Request $request)
     {
-        $this->productRepository->deleteById($request->product);
+        $product = $this->productRepository->deleteById($request->product);
+        Storage::disk('uploads')->delete($product->image);
         $request->session()->flash('alert-success', 'Prodotto eliminato con successo');
         return redirect('products/delete');
     }

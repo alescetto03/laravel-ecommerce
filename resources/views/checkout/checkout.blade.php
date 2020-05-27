@@ -10,96 +10,99 @@
                             <h3 class="text-orangeBrand">CHECKOUT</h3>
                         </div>
                         <div class="card-body container-checkout">
-                            <div class="row justify-content-around">
-                                <div class="col-6 col-checkout">
-                                    <div class="row justify-content-center">
-                                        <div class="col-md-12 container-title">
-                                            <h4 class="text-dark">Indirizzo di Fatturazione</h4>
+                            <form method="post" action="{{ url('/payment') }}">
+                                @csrf
+                                <div class="row justify-content-around">
+                                    <div class="col-6 col-checkout">
+                                        <div class="row justify-content-center">
+                                            <div class="col-md-12 container-title">
+                                                <h4 class="text-dark">Indirizzo di Fatturazione</h4>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="row justify-content-center">
-                                        <div class="col-12">
-                                            <div class="form-group">
-                                                <label for="name">Nome</label>
-                                                <input type="text" id="name" name="name" class="form-control" required placeholder="Mario">
+                                        <div class="row justify-content-center">
+                                            <div class="col-12">
+                                                <div class="form-group">
+                                                    <label for="name">Nome</label>
+                                                    <input type="text" id="name" name="name" class="form-control" required placeholder="Mario">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-center">
+                                            <div class="col-12">
+                                                <div class="form-group">
+                                                    <label for="surname">Cognome</label>
+                                                    <input type="text" id="surname" name="surname" class="form-control" required placeholder="Rossi">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-center">
+                                            <div class="col-12">
+                                                <div class="form-group">
+                                                    <label for="email">Email</label>
+                                                    <input type="text" id="email" name="email" class="form-control" required placeholder="mariorossi@test.com">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-center">
+                                            <div class="col-12">
+                                                <div class="form-group">
+                                                    <label for="address">Indirizzo</label>
+                                                    <input type="text" id="address" name="address" class="form-control" required placeholder="Rome, IT">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row justify-content-center">
-                                        <div class="col-12">
-                                            <div class="form-group">
-                                                <label for="surname">Cognome</label>
-                                                <input type="text" id="surname" name="surname" class="form-control" required placeholder="Rossi">
+                                    <div class="col-6 col-checkout">
+                                        <div class="row justify-content-center">
+                                            <div class="col-md-6 container-title">
+                                                <h4 class="text-success">Pagamento</h4>
+                                            </div>
+                                            <div class="col-md-6 img-metodPayment">
+                                                <img src="{{asset('img/MetodiPagamento.png')}}" width="140px">
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="row justify-content-center">
-                                        <div class="col-12">
-                                            <div class="form-group">
-                                                <label for="email">Email</label>
-                                                <input type="text" id="email" name="email" class="form-control" required placeholder="mariorossi@test.com">
+                                        <div class="row justify-content-center">
+                                            <div class="col-12">
+                                                <div class="form-group">
+                                                    <label for="card_number">Numero Carta</label>
+                                                    <input maxlength="16" type="text" id="card_number" name="card_number" class="form-control" required placeholder="1111 - 2222 - 3333 - 4444">
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="row justify-content-center">
-                                        <div class="col-12">
-                                            <div class="form-group">
-                                                <label for="address">Indirizzo</label>
-                                                <input type="text" id="address" name="address" class="form-control" required placeholder="Rome, IT">
+                                        <div class="row justify-content-center">
+                                            <div class="col-12">
+                                                <div class="form-group">
+                                                    <label for="card_intestatary">Intestatario carta</label>
+                                                    <input type="text" id="card_intestatary" name="card_intestatary" class="form-control" required placeholder="Mario Rossi">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-center">
+                                            <div class="col-8">
+                                                <div class="form-group">
+                                                    <label for="expiration">Scadenza</label>
+                                                    <input type="text" id="expiration" name="expiration" class="form-control" required placeholder="MM / YY">
+                                                </div>
+                                            </div>
+                                            <div class="col-4">
+                                                <div class="form-group">
+                                                    <label for="cvv">CVV</label>
+                                                    <input maxlength="3" type="text" id="cvv" name="cvv" class="form-control" required placeholder="XXX">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-center">
+                                            <div class="col-md-12 custom-control custom-checkbox">
+                                                <input type="checkbox" class="mr-2 bg-white">
+                                                <label for="payment"> fattura alla consegna</label>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <button type="submit" class="btn btn-success col-md-12">Conferma ordine</button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-6 col-checkout">
-                                    <div class="row justify-content-center">
-                                        <div class="col-md-6 container-title">
-                                            <h4 class="text-success">Pagamento</h4>
-                                        </div>
-                                        <div class="col-md-6 img-metodPayment">
-                                            <img src="{{asset('img/MetodiPagamento.png')}}" width="140px">
-                                        </div>
-                                    </div>
-                                    <div class="row justify-content-center">
-                                        <div class="col-12">
-                                            <div class="form-group">
-                                                <label for="card_number">Numero Carta</label>
-                                                <input type="text" id="card_number" name="card_number" class="form-control" required placeholder="1111 - 2222 - 3333 - 4444">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row justify-content-center">
-                                        <div class="col-12">
-                                            <div class="form-group">
-                                                <label for="card_intestatary">Intestatario carta</label>
-                                                <input type="text" id="card_intestatary" name="card_intestatary" class="form-control" required placeholder="Mario Rossi">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row justify-content-center">
-                                        <div class="col-8">
-                                            <div class="form-group">
-                                                <label for="expiration">Scadenza</label>
-                                                <input type="text" id="expiration" name="expiration" class="form-control" required placeholder="MM / YY">
-                                            </div>
-                                        </div>
-                                        <div class="col-4">
-                                            <div class="form-group">
-                                                <label for="cvv">CVV</label>
-                                                <input type="text" id="cvv" name="cvv" class="form-control" required placeholder="XXX">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row justify-content-center">
-                                        <div class="col-md-12 custom-control custom-checkbox">
-                                            <input type="checkbox" class="mr-2 bg-white">
-                                            <label for="payment"> fattura alla consegna</label>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <button type="submit" class="btn btn-success col-md-12">Conferma ordine</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>

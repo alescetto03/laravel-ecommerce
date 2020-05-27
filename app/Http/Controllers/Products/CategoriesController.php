@@ -63,15 +63,17 @@ class CategoriesController extends Controller
         $validatedData = $request->validate([
             'title' => 'nullable',
             'description' => 'nullable',
-            'image' => 'nullable|image',
+            'image' => 'nullable|file|image',
         ]);
-        if ($request->has('image')) {
-            $validatedData['image'] = $validatedData['image']->store('uploads', 'public');
-        }
         $category = $this->categoryRepository->getById($request->category);
         if ($category->title == 'Varie') {
             $request->session()->flash('alert-danger', 'Non puoi modificare la categoria Varie!');
             return redirect('categories/update');
+        }
+        if ($request->has('image')) {
+            Storage::disk('uploads')->put('uploads', $validatedData['image']);
+            $validatedData['image'] = $validatedData['image']->store('uploads', 'public');
+            Storage::disk('uploads')->delete($category->image);
         }
         $this->categoryManagement->update($validatedData, $category);
         $request->session()->flash('alert-success', 'Categoria modificata con successo');
@@ -94,6 +96,7 @@ class CategoriesController extends Controller
         $varie = $this->category->where('title', 'Varie')->first()->id;
         $this->productManagement->switchCategory($category->products()->get(), $varie);
         $category->delete();
+        Storage::disk('uploads')->delete($category->image);
         $request->session()->flash('alert-success', 'Categoria eliminata con successo');
         return redirect('categories/delete');
     }

@@ -50,7 +50,7 @@
 
                     <div class="form-group row">
                         <label for="name" class="text-orangeBrand col-md-4 col-form-label text-md-right">
-                            <strong>{{ __('Titolo') }}</strong>
+                            <strong>{{ __('Nome') }}</strong>
                         </label>
 
                         <div class="col-md-6">

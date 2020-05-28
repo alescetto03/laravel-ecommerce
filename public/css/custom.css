@@ -488,6 +488,9 @@ a.dropdown-header:hover{
     text-decoration:none;
     background-color:#3490dc
 }
+.dash-priv .col-dash{
+    cursor: not-allowed;
+}
 body{
     font-family: 'Barlow', sans-serif;
     background-color: ivory;
@@ -753,7 +756,11 @@ body{
         max-width:100%;
     }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
+    .dash-priv .col-dash{
+        flex:0 0 100%;
+        max-width:100%
+    }
     .img-metodPayment img{
         display: none;
     }

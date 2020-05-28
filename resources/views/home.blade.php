@@ -18,7 +18,8 @@
                         @endif
                         <p>Ora che stai nel tuo profilo, hai accesso ad una vastitudine di privileggi.</p>
                         <div class="dash-priv row justify-content-arounds m-2">
-                            <div class="col">
+                            <a href="{{ url('/chronology') }}">
+                                <div class="col">
                                 <h3>LA TUA CRONOLOGIA</h3>
                                 <div class="dash-col-body">
                                     <p>
@@ -31,7 +32,8 @@
                                     <path fill-rule="evenodd" d="M7.5 3a.5.5 0 01.5.5v5.21l3.248 1.856a.5.5 0 01-.496.868l-3.5-2A.5.5 0 017 9V3.5a.5.5 0 01.5-.5z" clip-rule="evenodd"/>
                                 </svg>
                             </div>
-                            <div class="col">
+                            </a>
+                            <div class="col col-dash" title="DISABILITATO" data-toggle="popover" data-placement="bottom" data-content="Sviluppo in corso">
                                 <h3>OFFERTE IN ANTEPRIMA</h3>
                                 <div class="dash-col-body">
                                     <p>
@@ -43,7 +45,7 @@
                                     <path fill-rule="evenodd" d="M2.5 4.5a2 2 0 114 0 2 2 0 01-4 0zm2-1a1 1 0 100 2 1 1 0 000-2z" clip-rule="evenodd"/>
                                 </svg>
                             </div>
-                            <div class="col">
+                            <div class="col col-dash" title="DISABILITATO" data-toggle="popover" data-placement="bottom" data-content="Sviluppo in corso">
                                 <h3>NUOVI PRODOTTI</h3>
                                 <div class="dash-col-body">
                                     <p>

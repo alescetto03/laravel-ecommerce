@@ -105,7 +105,7 @@
                                             <div class="col-8">
                                                 <div class="form-group">
                                                     <label for="expiration">Scadenza</label>
-                                                    <input maxlength="8" type="text" id="expiration" name="expiration" class="form-control" required placeholder="MM / YY">
+                                                    <input maxlength="8" type="text" id="expiration" name="expiration" class="form-control" required placeholder="MM / YYYY">
 
                                                     @error('expiration')
                                                         <div class="alert alert-danger">{{ $message }}</div>

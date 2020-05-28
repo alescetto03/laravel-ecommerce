@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css?family=Barlow:400,500,600,700,800,900&display=swap" rel="stylesheet">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css-cstm_02/custom.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/custom.css') }}" rel="stylesheet" type="text/css">
 </head>
 <body>
 <nav class="navbar navbar-expand-sm bg-dark  navbar-dark sticky-top">
@@ -49,7 +49,7 @@
             </li>
         </ul>
         <!--Search bar-->
-        <form class="form-inline my-2 my-lg-0 mr-auto">
+        <form class="form-inline my-2 my-lg-0 mr-auto" style="display: none;">
             <input class="form-control mr-sm-2 searchBar" type="search" placeholder="Cerca" aria-label="Search">
             <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">
                 <svg class="bi bi-search" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -93,9 +93,6 @@
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                         <a href="{{ url('/home') }}" class="dropdown-item">
                             User Area
-                        </a>
-                        <a href="{{ url('/chronology') }}" class="dropdown-item">
-                            Cronologia acquisti
                         </a>
                         @if(Auth::user()->can('product-management') || Auth::user()->can('user-management'))
                             <a href="{{ url('/admin') }}" class="dropdown-item">

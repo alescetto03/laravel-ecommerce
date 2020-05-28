@@ -64,6 +64,7 @@ class CheckoutController extends Controller
         $this->cart->destroy();
         return redirect('/chronology');
     }
+
     public function chronology()
     {
         $orders = $this->orderRepository->getAll();

@@ -39,4 +39,10 @@ class CartController extends Controller
         $this->cart->update($request->id, $request->quantity);
         return back();
     }
+
+    public function delete(Request $request)
+    {
+        $this->cart->remove($request->id);
+        return redirect('cart/index');
+    }
 }

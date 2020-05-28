@@ -65,8 +65,12 @@ Route::get('products/{id}/{name}', 'GuestController@product');
 /** Carrello */
 
 Route::post('cart/add', 'CartController@store');
-Route::post('cart/update', 'CartController@update');
+
 Route::get('cart/index', 'CartController@index');
+
+Route::post('cart/update', 'CartController@update');
+
+Route::post('cart/delete', 'CartController@delete');
 
 /** Checkout */
 

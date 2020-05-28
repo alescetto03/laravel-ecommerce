@@ -40,7 +40,11 @@
                                                         <input id="input_number" class="number-form-input" type="number" name="quantity" autocomplete="off" value="{{ $product->qty }}">
                                                         <button id="add" class="oper-btn">+</button>
                                                     </div>
-                                                    <buttom class="btn btn-danger">Rimuovi</buttom>
+                                                </form>
+                                                <form class="text-center" method="POST" action="{{ url('cart/delete') }}">
+                                                    @csrf
+                                                    <input type="hidden" name="id" value="{{ $product->rowId }}">
+                                                    <button type="submit" class="btn btn-danger">Rimuovi</button>
                                                 </form>
                                             </div>
                                         </div>

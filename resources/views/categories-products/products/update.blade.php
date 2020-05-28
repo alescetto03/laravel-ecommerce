@@ -69,6 +69,12 @@
 
                         <div class="col-md-6">
                             <input id="name" type="text" class="login-form-input border-dark form-control" name="name" value="{{ old('name') }}" autocomplete="name" autofocus>
+
+                            @error('name')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
                         </div>
                     </div>
 
@@ -79,6 +85,12 @@
 
                         <div class="col-md-6">
                             <input id="description" type="text" class="login-form-input border-dark form-control " name="description" value="{{ old('description') }}" autocomplete="description" autofocus>
+
+                            @error('description')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
                         </div>
                     </div>
 
@@ -89,6 +101,12 @@
 
                         <div class="col-md-6">
                             <input id="price" type="text" class="login-form-input border-dark form-control" name="price" value="{{ old('price') }}" autocomplete="price" autofocus>
+
+                            @error('price')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
                         </div>
                     </div>
 
@@ -99,6 +117,12 @@
 
                         <div class="col-md-6">
                             <input id="image" type="file" class="py-1" name="image">
+
+                            @error('image')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
                         </div>
                     </div>
 

@@ -24,6 +24,10 @@
                                                 <div class="form-group">
                                                     <label for="name">Nome</label>
                                                     <input type="text" id="name" name="name" class="form-control" required placeholder="Mario">
+
+                                                    @error('name')
+                                                        <div class="alert alert-danger">{{ $message }}</div>
+                                                    @enderror
                                                 </div>
                                             </div>
                                         </div>
@@ -32,6 +36,10 @@
                                                 <div class="form-group">
                                                     <label for="surname">Cognome</label>
                                                     <input type="text" id="surname" name="surname" class="form-control" required placeholder="Rossi">
+
+                                                    @error('surname')
+                                                        <div class="alert alert-danger">{{ $message }}</div>
+                                                    @enderror
                                                 </div>
                                             </div>
                                         </div>
@@ -40,6 +48,10 @@
                                                 <div class="form-group">
                                                     <label for="email">Email</label>
                                                     <input type="text" id="email" name="email" class="form-control" required placeholder="mariorossi@test.com">
+
+                                                    @error('email')
+                                                        <div class="alert alert-danger">{{ $message }}</div>
+                                                    @enderror
                                                 </div>
                                             </div>
                                         </div>
@@ -48,6 +60,10 @@
                                                 <div class="form-group">
                                                     <label for="address">Indirizzo</label>
                                                     <input type="text" id="address" name="address" class="form-control" required placeholder="Rome, IT">
+
+                                                    @error('address')
+                                                        <div class="alert alert-danger">{{ $message }}</div>
+                                                    @enderror
                                                 </div>
                                             </div>
                                         </div>
@@ -66,6 +82,10 @@
                                                 <div class="form-group">
                                                     <label for="card_number">Numero Carta</label>
                                                     <input maxlength="16" type="text" id="card_number" name="card_number" class="form-control" required placeholder="1111 - 2222 - 3333 - 4444">
+
+                                                    @error('card_number')
+                                                        <div class="alert alert-danger">{{ $message }}</div>
+                                                    @enderror
                                                 </div>
                                             </div>
                                         </div>
@@ -74,6 +94,10 @@
                                                 <div class="form-group">
                                                     <label for="card_intestatary">Intestatario carta</label>
                                                     <input type="text" id="card_intestatary" name="card_intestatary" class="form-control" required placeholder="Mario Rossi">
+
+                                                    @error('card_intestatary')
+                                                        <div class="alert alert-danger">{{ $message }}</div>
+                                                    @enderror
                                                 </div>
                                             </div>
                                         </div>
@@ -81,13 +105,21 @@
                                             <div class="col-8">
                                                 <div class="form-group">
                                                     <label for="expiration">Scadenza</label>
-                                                    <input type="text" id="expiration" name="expiration" class="form-control" required placeholder="MM / YY">
+                                                    <input maxlength="8" type="text" id="expiration" name="expiration" class="form-control" required placeholder="MM / YY">
+
+                                                    @error('expiration')
+                                                        <div class="alert alert-danger">{{ $message }}</div>
+                                                    @enderror
                                                 </div>
                                             </div>
                                             <div class="col-4">
                                                 <div class="form-group">
                                                     <label for="cvv">CVV</label>
                                                     <input maxlength="3" type="text" id="cvv" name="cvv" class="form-control" required placeholder="XXX">
+
+                                                    @error('cvv')
+                                                        <div class="alert alert-danger">{{ $message }}</div>
+                                                    @enderror
                                                 </div>
                                             </div>
                                         </div>

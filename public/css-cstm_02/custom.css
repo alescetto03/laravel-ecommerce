@@ -2,6 +2,34 @@
 body {
     overflow-x: hidden;
 }
+a:hover{
+    text-decoration: none;
+}
+.container-chronology-text .order-bx p{
+    font-size: 16px;
+}
+.container-chronology-text .order-bx p{
+    font-size: 16px;
+}
+.container-chronology-text .order-bx .circle{
+    padding: 10px;
+    background-color: #ffffff;
+}
+.container-chronology-text .order-bx .info-order-bx{
+    border-radius: 10px 0 0 10px;
+}
+.container-chronology-text .order-bx .data-order-bx{
+    border-radius: 0 40px 40px 0;
+}
+.container-chronology-text .icon-bx .icon{
+    font-size: 75px;
+}
+.container-chronology-text .content p{
+    font-size: 17px;
+}
+.container-chronology-text{
+    border-radius: 10px;
+}
 .img-metodPayment img{
     width: 140px;
 }

@@ -60,15 +60,10 @@ class CheckoutController extends Controller
         $user_id = $request->user()->id;
         $cart = $this->cart->content();
         $this->orderFactory->create($validatedData['name'], $validatedData['surname'], $validatedData['email'], $validatedData['address'], serialize($credit_card), $cart, $user_id);
+        $request->session()->flash('alert-success', '<strong>IL TUO ORDINE E\' STATO CONFERMATO</strong> Grazie per aver scelto il nostro servizio!');
         $this->cart->destroy();
-        return redirect('thankyou');
+        return redirect('/chronology');
     }
-
-    public function thanks()
-    {
-        echo "thank you :)";
-    }
-
     public function chronology()
     {
         $orders = $this->orderRepository->getAll();

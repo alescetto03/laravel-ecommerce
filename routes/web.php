@@ -13,8 +13,7 @@
 
 /** Ale */
 
-//TODO:: FARE IL CHECKOUT
-//TODO:: FARE IN MODO DI ELIMINARE LE IMMAGINI INUTILIZZATE QUANDO SI ELIMINA/MODIFICA UN PRODOTTO/CATEGORIA
+//TODO::FARE IN MODO DI FAR USCIRE IL MESSAGGIO QUANDO SI AGGIUNGE UN NUOVO ORDINE NELLA CRONOLOGIA
 
 /** */
 
@@ -73,12 +72,10 @@ Route::get('cart/index', 'CartController@index');
 
 Route::get('checkout', 'CheckoutController@index');
 Route::post('payment', 'CheckoutController@payment');
-Route::get('thankyou', 'CheckoutController@thanks');
 
 /** Chronology */
 
-Route::get('chronology', 'ChronologyController@index');
-Route::get('chronology/store', 'ChronologyController@store');
+Route::get('/chronology', 'CheckoutController@chronology');
 
 Route::get('/homepage', function() {
     return view('homepage');

@@ -31,7 +31,7 @@ class CartController extends Controller
     public function store(Request $request)
     {
         $this->cart->add($request->id, $request->name, +1, $request->price, 0, ['description' => $request->description, 'image' => $request->image]);
-        return back();
+        return redirect('/cart/index');
     }
 
     public function update(Request $request)

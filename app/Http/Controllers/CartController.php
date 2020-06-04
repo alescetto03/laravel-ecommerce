@@ -22,9 +22,8 @@ class CartController extends Controller
     public function index()
     {
         $cart = $this->cart->content();
-        $total = $this->cart->priceTotal();
         $totalTax = $this->cart->total();
-        $tax = $totalTax - $total;
+        $tax = $this->cart->tax();
         return view('cart.index', compact('tax', 'cart', 'totalTax'));
     }
 

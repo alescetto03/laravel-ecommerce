@@ -15,8 +15,10 @@
 
 //TODO::FARE IN MODO DI FAR USCIRE IL MESSAGGIO QUANDO SI AGGIUNGE UN NUOVO ORDINE NELLA CRONOLOGIA
 
-/** */
-
+/** Jose*/
+/*
+ *  TODO::Capire come create una crud fatta bene
+ */
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -61,6 +63,18 @@ Route::get('products/delete', 'ProductsController@remove');
 Route::post('products/delete', 'ProductsController@delete');
 
 Route::get('products/{id}/{name}', 'GuestController@product');
+
+/** Ordini */
+Route::get('order/add', 'OrdersController@add');
+Route::post('order/add', 'OrdersController@create');
+
+Route::get('order/read', 'OrdersController@read');
+
+Route::get('order/update', 'OrdersController@edit');
+Route::post('order/update', 'OrdersController@update');
+
+Route::get('order/delete', 'OrdersController@remove');
+Route::post('order/delete', 'OrdersController@delete');
 
 /** Carrello */
 

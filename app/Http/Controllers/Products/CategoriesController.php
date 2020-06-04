@@ -8,7 +8,6 @@ use App\Api\Category\CategoryRepositoryInterface;
 use App\Api\Model\CategoryInterface;
 use App\Api\Product\ProductManagementInterface;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
 class CategoriesController extends Controller

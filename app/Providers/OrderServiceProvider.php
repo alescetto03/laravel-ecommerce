@@ -4,8 +4,10 @@ namespace App\Providers;
 
 use App\Api\Model\OrderInterface;
 use App\Api\Order\OrderFactoryInterface;
+use App\Api\Order\OrderManagementInterface;
 use App\Api\Order\OrderRepositoryInterface;
 use App\Factory\OrderFactory;
+use App\Management\OrderManagement;
 use App\Model\Order;
 use App\Repository\OrderRepository;
 use Illuminate\Support\ServiceProvider;
@@ -52,6 +54,15 @@ class OrderServiceProvider extends ServiceProvider
         $this->app->singleton(
             OrderFactoryInterface::class,
             OrderFactory::class
+        );
+        $this->app->bind(
+            OrderManagementInterface::class,
+            OrderManagement::class
+        );
+
+        $this->app->singleton(
+            OrderManagementInterface::class,
+            OrderManagement::class
         );
     }
 }

@@ -13,7 +13,7 @@
 
 /** Ale */
 
-//TODO::FARE IN MODO DI FAR USCIRE IL MESSAGGIO QUANDO SI AGGIUNGE UN NUOVO ORDINE NELLA CRONOLOGIA
+//TODO::(BADGE NEW) PRENDI GLI ULTIMI 9 PRODOTTI INSERITI E METTILI NELLO SLIDER
 
 /** */
 
@@ -21,9 +21,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/', function () {
-    return view('homepage');
-});
+Route::get('/', 'GuestController@homepage');
 
 Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
     Route::resource('/users', 'UsersController', ['except' => ['show', 'create', 'store']]);
@@ -62,6 +60,25 @@ Route::post('products/delete', 'ProductsController@delete');
 
 Route::get('products/{id}/{name}', 'GuestController@product');
 
+/** Badge */
+
+Route::get('badges/add', 'BadgeController@add');
+Route::post('badges/add', 'BadgeController@create');
+
+Route::get('badges/read', 'BadgeController@read');
+
+Route::get('badges/update', 'BadgeController@edit');
+Route::post('badges/update', 'BadgeController@update');
+
+Route::get('badges/delete', 'BadgeController@remove');
+Route::post('badges/delete', 'BadgeController@delete');
+
+/** Product Badge */
+
+Route::get('products/badges/edit/{id}', 'ProductBadgeController@edit');
+Route::post('products/badges/edit/{id}', 'ProductBadgeController@update');
+
+
 /** Carrello */
 
 Route::post('cart/add', 'CartController@store');
@@ -77,10 +94,11 @@ Route::post('cart/delete', 'CartController@delete');
 Route::get('checkout', 'CheckoutController@index');
 Route::post('payment', 'CheckoutController@payment');
 
-/** Chronology */
+/** Cronologia */
 
 Route::get('/chronology', 'CheckoutController@chronology');
 
-Route::get('/homepage', function() {
-    return view('homepage');
-});
+/** Search bar */
+
+Route::post('search', 'GuestController@search');
+Route::post('search/fetch', 'GuestController@fetch')->name('search.fetch');

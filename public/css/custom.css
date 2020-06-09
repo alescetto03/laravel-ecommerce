@@ -648,6 +648,21 @@ body{
     width: 280px;
     height: 400px;
 }
+.badge-container {
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.img-dim {
+    width: 64px;
+    height: 64px;
+}
+.w-dropdown {
+    width: 377px;
+}
+.text-decoration-line-through {
+    text-decoration: line-through;
+}
 @media screen and (max-width: 1200px) {
     .img-metodPayment img{
         width: 90px;
@@ -755,6 +770,9 @@ body{
         flex:0 0 100%;
         max-width:100%;
     }
+    .searchBar {
+        width: 40% !important;
+    }
 }
 @media screen and (max-width: 768px) {
     .dash-priv .col-dash{
@@ -845,6 +863,9 @@ body{
         color: #FCC018;
         font-size: 18px;
     }
+    .searchBar {
+        width: 35% !important;
+    }
 }
 @media screen and (max-width: 720px) {
     .small-screen{
@@ -888,8 +909,9 @@ body{
         display: none;
     }
     .searchBar{
-        width: 85%;
+        width: 55%;
         margin-right: 20px;
+        margin-left: .5rem;
     }
     .img-bx {
         width: 280px;
@@ -928,5 +950,16 @@ body{
     }
     .carousel-caption p{
         font-size: 15px;
+    }
+    .w-dropdown {
+        width: 90% !important;
+    }
+}
+
+@media screen and (max-width: 509px){
+    .searchBar{
+        width: 35%;
+        margin-right: 20px;
+        margin-left: .5rem;
     }
 }

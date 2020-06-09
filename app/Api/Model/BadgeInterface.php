@@ -4,7 +4,7 @@
 namespace App\Api\Model;
 
 
-interface CategoryInterface
+interface BadgeInterface
 {
     public function products();
 }

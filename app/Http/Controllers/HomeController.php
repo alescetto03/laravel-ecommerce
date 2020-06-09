@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Api\Category\CategoryRepositoryInterface;
+use App\Api\Product\ProductRepositoryInterface;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -15,9 +17,15 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
+    public function __construct
+    (
+        CategoryRepositoryInterface $categoryRepository,
+        ProductRepositoryInterface $productRepository
+    )
     {
         $this->middleware('auth');
+        $this->categoryRepository = $categoryRepository;
+        $this->productRepository = $productRepository;
     }
 
     /**

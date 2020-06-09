@@ -37,6 +37,8 @@
                                 <th scope="col">Description</th>
                                 <th scope="col">Price</th>
                                 <th scope="col">Category</th>
+                                <th scope="col">Badges</th>
+                                <th scope="col">Actions</th>
                             </thead>
                             <tbody>
                             @foreach($products as $product)
@@ -46,9 +48,18 @@
                                     <td>{{ $product->description }}</td>
                                     <td>{{ $product->price }}</td>
                                     <td>{{ $product->category->title }}</td>
+                                    <td>
+                                        @foreach($product->badges as $badge)
+                                            {{ $badge->title, " " }}
+                                        @endforeach
+                                    </td>
+                                    <td>
+                                        <a href="{{ url('products/badges/edit', $product->id ) }}">
+                                            <button type="button" class="btn btn-warning p-1">Edit badge</button>
+                                        </a>
+                                    </td>
                                 </tr>
                             @endforeach
-
                             </tbody>
                         </table>
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Api\Order\OrderFactoryInterface;
 use App\Api\Order\OrderRepositoryInterface;
+use Illuminate\Support\Facades\Auth;
 use LVR\CreditCard\CardCvc;
 use LVR\CreditCard\CardNumber;
 use LVR\CreditCard\CardExpirationYear;
@@ -34,8 +35,7 @@ class CheckoutController extends Controller
     {
         $total = $this->cart->total();
         $cart = $this->cart->content();
-        $totalNoTax = $this->cart->priceTotal();
-        $tax = $total - $totalNoTax;
+        $tax = $this->cart->tax();
         return view('checkout.checkout', compact('cart', 'total', 'tax'));
     }
 
@@ -67,7 +67,7 @@ class CheckoutController extends Controller
 
     public function chronology()
     {
-        $orders = $this->orderRepository->getAll();
+        $orders = Auth::user()->orders;
         return view('purchase.chronology', compact('orders'));
     }
 }

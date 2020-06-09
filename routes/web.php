@@ -15,8 +15,10 @@
 
 //TODO::(BADGE NEW) PRENDI GLI ULTIMI 9 PRODOTTI INSERITI E METTILI NELLO SLIDER
 
-/** */
-
+/** Jose*/
+/*
+ *  TODO::Capire come create una crud fatta bene
+ */
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -78,6 +80,18 @@ Route::post('badges/delete', 'BadgeController@delete');
 Route::get('products/badges/edit/{id}', 'ProductBadgeController@edit');
 Route::post('products/badges/edit/{id}', 'ProductBadgeController@update');
 
+/** Ordini */
+
+Route::get('order/add', 'OrdersController@add');
+Route::post('order/add', 'OrdersController@create');
+
+Route::get('order/read', 'OrdersController@read');
+
+Route::get('order/update', 'OrdersController@edit');
+Route::post('order/update', 'OrdersController@update');
+
+Route::get('order/delete', 'OrdersController@remove');
+Route::post('order/delete', 'OrdersController@delete');
 
 /** Carrello */
 

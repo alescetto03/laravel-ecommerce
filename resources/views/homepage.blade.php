@@ -111,7 +111,7 @@
                                                 <img class="d-block w-100 h-100 img-fluid" src="{{ asset('storage/' . $prod->image) }}" alt="Product Image" width="32" height="32">
                                                 <div class="content">
                                                     <h2>{{ $prod->name }}</h2>
-                                                    <p>{{ $prod->price }}</p>
+                                                    <p>{{ $prod->price }} €</p>
                                                     <a href="{{ url('products/' . $prod->id . '/' . $prod->name) }}">Vai alla pagina del prodotto</a>
                                                 </div>
                                             </div>

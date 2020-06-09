@@ -2,6 +2,9 @@
 body {
     overflow-x: hidden;
 }
+.link-hover_Orange:hover{
+   color: #b28412;
+}
 a:hover{
     text-decoration: none;
 }

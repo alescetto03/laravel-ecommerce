@@ -7,6 +7,8 @@ use App\Api\Model\BadgeInterface;
 use App\Api\Model\ProductInterface;
 use App\Api\Product\ProductRepositoryInterface;
 use Illuminate\Http\Request;
+use Illuminate\Support\Collection;
+use Illuminate\Support\Str;
 
 class GuestController extends Controller
 {
@@ -76,7 +78,7 @@ class GuestController extends Controller
             $output = '<ul class="dropdown-menu bg-dark w-100 d-block">';
             foreach($data as $row)
             {
-                $output .= '<li class="dropdown-item">' . '<div class="row">' . '<div class="image-wrapper w-25 col-auto"><img src="' . asset('storage/' . $row->image) . '" class="img-dim"></div>' . '<div class="w-75 col-auto">' . '<p class="my-0"><a href="' . url('products/' . $row->id . '/' . $row->name) . '" class="text-orangeBrand">' . $row->name . '</a></p>';
+                $output .= '<li class="dropdown-item">' . '<div class="row">' . '<div class="image-wrapper w-25 col-auto"><img src="' . asset('storage/' . $row->image) . '" class="img-dim"></div>' . '<div class="w-75 col-auto">' . '<p class="my-0"><a href="' . url('products/' . $row->id . '/' . $row->name) . '" class="text-orangeBrand link-hover_Orange">' . $row->name . '</a></p>';
                 if ($row->badges->where('title', 'New')->isNotEmpty()) {
                     $output .=
                     '<p class="my-0">

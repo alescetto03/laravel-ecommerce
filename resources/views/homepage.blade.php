@@ -117,6 +117,7 @@
                                                             <span class="mx-1">{{ $prod->discount($prod->badges()->where('title', 'like', '%off')->first()["value"]) }} €</span>
                                                         @endif
                                                     </p>
+                                                    <p>{{ $prod->price }} €</p>
                                                     <a href="{{ url('products/' . $prod->id . '/' . $prod->name) }}">Vai alla pagina del prodotto</a>
                                                 </div>
                                             </div>

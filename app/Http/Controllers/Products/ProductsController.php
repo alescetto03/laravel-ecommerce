@@ -98,6 +98,7 @@ class ProductsController extends Controller
     public function delete(Request $request)
     {
         $product = $this->productRepository->deleteById($request->product);
+        $product->badges()->detach();
         Storage::disk('uploads')->delete($product->image);
         $request->session()->flash('alert-success', 'Prodotto eliminato con successo');
         return redirect('products/delete');

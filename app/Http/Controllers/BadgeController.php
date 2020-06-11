@@ -25,6 +25,7 @@ class BadgeController extends Controller
         $this->badgeFactory = $badgeFactory;
         $this->badgeRepository = $badgeRepository;
         $this->badgeManagement = $badgeManagement;
+        $this->middleware('is-admin');
     }
 
     public function add()
@@ -37,7 +38,7 @@ class BadgeController extends Controller
         $validatedData = $request->validate([
             'title' => 'required',
             'badge' => 'required|file|image',
-            'value' => 'required|numeric',
+            'value' => 'nullable|numeric',
         ]);
         $this->badgeFactory->create($validatedData['title'], $validatedData['badge']->store('uploads', 'public'), $validatedData['value']);
         Storage::disk('uploads')->put('uploads', $validatedData['badge']);
@@ -84,6 +85,7 @@ class BadgeController extends Controller
     public function delete(Request $request)
     {
         $badge = $this->badgeRepository->deleteById($request->badge);
+        $badge->products()->detach();
         Storage::disk('uploads')->delete($badge->image);
         $request->session()->flash('alert-success', 'Badge eliminato con successo');
         return redirect('badges/delete');

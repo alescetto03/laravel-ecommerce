@@ -20,6 +20,7 @@ class ProductBadgeController extends Controller
     {
         $this->badgeRepository = $badgeRepository;
         $this->productRepository = $productRepository;
+        $this->middleware('is-admin');
     }
 
     public function edit($id)

@@ -93,7 +93,7 @@
         <div class="container ">
             <div class="header-topCtg text-center py-1">
                 <h2>Nuovi arrivi</h2>
-                <p>Ecco i nostri ultimi prodotti belli freschi freschi</p>
+                <p>Ecco i nostri ultimi prodotti</p>
             </div>
             <div class="separetor"></div>
             <div class="mr-left-topctg my-4">
@@ -111,7 +111,12 @@
                                                 <img class="d-block w-100 h-100 img-fluid" src="{{ asset('storage/' . $prod->image) }}" alt="Product Image" width="32" height="32">
                                                 <div class="content">
                                                     <h2>{{ $prod->name }}</h2>
-                                                    <p>{{ $prod->price }}</p>
+                                                    <p>
+                                                        <span class="@if($prod->badges()->where('title', 'like', '%off')->get()->isNotEmpty()) text-decoration-line-through @endif mx-1">{{$prod->price}} €</span>
+                                                        @if($prod->badges()->where('title', 'like', '%off')->get()->isNotEmpty())
+                                                            <span class="mx-1">{{ $prod->discount($prod->badges()->where('title', 'like', '%off')->first()["value"]) }} €</span>
+                                                        @endif
+                                                    </p>
                                                     <a href="{{ url('products/' . $prod->id . '/' . $prod->name) }}">Vai alla pagina del prodotto</a>
                                                 </div>
                                             </div>
@@ -127,6 +132,57 @@
                         </div>
                     </a>
                     <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <div class="crs-button-move">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-dark py-4 mt-5">
+        <div class="container ">
+            <div class="header-topCtg text-center py-1">
+                <h2>Slider di prova</h2>
+                <p>prova</p>
+            </div>
+            <div class="separetor"></div>
+            <div class="mr-left-topctg my-4">
+                <div id="example" class="carousel slide" data-ride="carousel" data-interval="false">
+                    <div class="carousel-inner">
+                        @foreach($a as $index => $b)
+                            <div class="carousel-item bg-dark @if($index == 0) active @endif">
+                                <div class="row">
+                                    @foreach($b as $c)
+                                        <div class="col-sm-4 topCtgs-container">
+                                            <div class="position-absolute badge-container py-2 px-3">
+                                                <img src="{{ asset('storage/' . $c->badges->last()->badge) }}" width="32" height="32">
+                                            </div>
+                                            <div class="box">
+                                                <img class="d-block w-100 h-100 img-fluid" src="{{ asset('storage/' . $c->image) }}" alt="Product Image" width="32" height="32">
+                                                <div class="content">
+                                                    <h2>{{ $c->name }}</h2>
+                                                    <p>
+                                                        <span class="@if($c->badges()->where('title', 'like', '%off')->get()->isNotEmpty()) text-decoration-line-through @endif mx-1">{{$c->price}} €</span>
+                                                        @if($c->badges()->where('title', 'like', '%off')->get()->isNotEmpty())
+                                                            <span class="mx-1">{{ $c->discount($c->badges()->where('title', 'like', '%off')->first()["value"]) }} €</span>
+                                                        @endif
+                                                    </p>
+                                                    <a href="{{ url('products/' . $c->id . '/' . $c->name) }}">Vai alla pagina del prodotto</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+                    <a class="carousel-control-prev" href="#example" role="button" data-slide="prev">
+                        <div class="crs-button-move">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        </div>
+                    </a>
+                    <a class="carousel-control-next" href="#example" role="button" data-slide="next">
                         <div class="crs-button-move">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         </div>

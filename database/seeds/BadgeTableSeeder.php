@@ -21,6 +21,6 @@ class BadgeTableSeeder extends Seeder
      */
     public function run()
     {
-        $this->badgeFactory->create('New', 'uploads/new.png', 100);
+        $this->badgeFactory->create('New', 'uploads/new.png', NULL);
     }
 }

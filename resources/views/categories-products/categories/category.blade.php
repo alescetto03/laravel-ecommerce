@@ -25,7 +25,7 @@
                                         <p class="text-white mb-1">
                                             <span class="@if($product->badges()->where('title', 'like', '%off')->get()->isNotEmpty()) text-decoration-line-through @endif mx-1">{{$product->price}} €</span>
                                             @if($product->badges()->where('title', 'like', '%off')->get()->isNotEmpty())
-                                                <span class="mx-1">{{ $product->discount($product->badges()->where('title', 'like', '%off')->first()["value"]) }}</span>
+                                                <span class="mx-1">{{ $product->discount($product->badges()->where('title', 'like', '%off')->first()["value"]) }} €</span>
                                             @endif
                                         </p>
                                         @if(!$product->badges->where('title', 'New')->isEmpty())

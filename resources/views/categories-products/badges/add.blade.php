@@ -33,7 +33,9 @@
                 </div>
                 <div class="p-2 text-center">
                     <h2 class="text-orangeBrand">CREATE</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p>Nota: se si vuole inserire un badge per gli sconti dare un valore di percentuale nel campo 'valore', inoltre nel campo 'titolo' inserire il valore di percentuale susseguito da 'off'</p>
+                    <p>Altrimenti lasciare il campo 'valore' vuoto</p>
+                    <p>Per associare i badge ad un prodotto andare nella sezione 'read' dei prodotti all'interno dell'area admin</p>
                 </div>
             </div>
             <div class="col-md-6 p-5">
@@ -86,7 +88,7 @@
                         </label>
 
                         <div class="col-md-6">
-                            <input id="value" type="text" class="login-form-input border-dark form-control @error('value') is-invalid @enderror" name="value" value="{{ old('value') }}" required autocomplete="value" autofocus>
+                            <input id="value" type="text" class="login-form-input border-dark form-control @error('value') is-invalid @enderror" name="value" value="{{ old('value') }}" autocomplete="value" autofocus>
 
                             @error('value')
                             <span class="invalid-feedback" role="alert">

@@ -32,7 +32,8 @@ class GuestController extends Controller
     public function homepage()
     {
         $products = $this->badge->where('title', 'New')->first()->products->chunk(3);
-        return view('homepage', compact('products'));
+        $a = $this->productRepository->getAll()->chunk(3);
+        return view('homepage', compact('products', 'a'));
     }
 
     public function productIndex()

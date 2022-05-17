@@ -5,7 +5,7 @@
         <div class="col-md-6 brand-halfpage">
             <div class="box">
                 <img src="{{asset('img/logo.png')}}" alt="logo" style="width:40%; height: 40%">
-                <h2 class="text-white"><strong>DNA</strong>commerce</h2>
+                <h2 class="text-white"><strong>MeMi</strong>commerce</h2>
             </div>
         </div>
         <div class="col-md-6 py-3 form-box">

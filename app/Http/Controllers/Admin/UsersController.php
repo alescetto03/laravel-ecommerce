@@ -45,7 +45,7 @@ class UsersController extends Controller
     public function edit(User $user)
     {
         $roles = $this->roleRepository->getAll();
-
+        
         return view('admin.users.edit')->with([
             'user' => $user,
             'roles' => $roles

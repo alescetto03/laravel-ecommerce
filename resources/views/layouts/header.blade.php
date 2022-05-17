@@ -16,6 +16,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css_cst_1/custom.css') }}" rel="stylesheet" type="text/css">
+	<link rel="icon" href="{{ asset('img/logo.png') }}" />
 </head>
 <body>
 <nav class="navbar navbar-expand-sm bg-dark  navbar-dark sticky-top">

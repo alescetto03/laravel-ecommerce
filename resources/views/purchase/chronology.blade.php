@@ -41,7 +41,7 @@
                 </div>
                 <div class="d-flex flex-column-reverse">
                     @if($orders->isEmpty())
-                        <h4 class="text-center font-weight-normal p-3">Nessun ordinazione</h4>
+                        <h4 class="text-center font-weight-normal p-3">Non hai ancora effettuato un ordine</h4>
                     @else
                         @foreach($orders as $order)
                             <div class="row justify-content-center text-dark order-bx p-3 m-2">
